@@ -1,0 +1,142 @@
+<!DOCTYPE html><!-- DESIGN MOCKUP. Copy from approved v7.2. Segoe UI. -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smarter People | Accion Labs</title><meta name="description" content="Augment human capacity — copilots, low-code, and agentic workflows that elevate every role."><style>
+:root{
+ --purple:#7B36AF;--blue:#1A4FC9;--green:#146800;--orange:#DF7028;--red:#B73734;--gray:#69737D;
+ --ink:#14152A;--ink2:#3a3b52;--muted:#6b7078;--line:#e7e7ef;--bg:#fff;--bg2:#f7f7fb;
+ --font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--maxw:1180px;--r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ac,var(--purple))}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em;font-weight:800}
+h1{font-size:clamp(32px,5vw,56px)}h2{font-size:clamp(24px,3.2vw,38px)}h3{font-size:19px;font-weight:700}
+p{color:var(--ink2)}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-weight:700;font-size:15px;padding:13px 22px;border-radius:999px;transition:transform .15s,box-shadow .15s,background .15s}
+.btn-primary{background:var(--purple);color:#fff;box-shadow:0 8px 22px rgba(123,54,175,.28)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--purple);color:var(--purple)}
+header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:21px}
+.brand .mk{width:20px;height:20px;clip-path:polygon(50% 0,100% 100%,0 100%);background:linear-gradient(135deg,var(--red),var(--purple))}
+.brand span{color:var(--gray)}
+.menu{display:flex;align-items:center;gap:20px}
+.menu>li{list-style:none;position:relative}
+.menu>li>a{display:flex;align-items:center;gap:5px;font-size:14px;font-weight:600;color:var(--ink2);padding:24px 0;cursor:pointer;white-space:nowrap}
+.menu>li>a:hover,.menu>li.open>a{color:var(--purple)}
+.car{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px}
+.mega{position:absolute;top:64px;left:0;width:720px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px rgba(20,21,42,.14);padding:22px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.18s;display:grid;grid-template-columns:1fr 1fr;gap:8px 26px}
+.mega.r{left:auto;right:0;width:420px;grid-template-columns:1fr}
+.menu>li.open .mega{opacity:1;visibility:visible;transform:none}
+.mega .ch{grid-column:1/-1;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 0 2px}
+.mega .gh{grid-column:span 1;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:2px}
+.mega a.it{display:block;padding:9px 11px;border-radius:10px;border-left:3px solid transparent}
+.mega a.it:hover{background:var(--bg2)}
+.mega .it .t{font-weight:700;font-size:14.5px;color:var(--ink)}
+.mega .it .s{font-size:11.5px;color:var(--muted);margin-top:1px}
+.navr{display:flex;align-items:center;gap:12px}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.ham span{width:24px;height:2px;background:var(--ink);display:block}
+.mnav{display:none;padding:10px 0 18px;border-top:1px solid var(--line)}
+.mnav.show{display:block}.mnav a{display:block;padding:11px 4px;font-weight:600;border-bottom:1px solid var(--line);color:var(--ink2)}
+section.blk{padding:76px 0}
+.sec-head{max-width:720px;margin-bottom:40px}.sec-head h2{margin:10px 0}.sec-head p{font-size:17px}
+.hero{position:relative;overflow:hidden;padding:82px 0 66px;background:linear-gradient(180deg,#fff,var(--bg2))}
+.hero .gfx{position:absolute;right:-30px;top:20px;width:52%;max-width:600px;opacity:.9;z-index:0}
+.hero .wrap{position:relative;z-index:1;max-width:820px}
+.hero h1{margin:14px 0 16px}
+.hero h1 .g{background:linear-gradient(100deg,var(--purple),var(--blue) 55%,var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{font-size:clamp(17px,2vw,21px);max-width:640px}
+.cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden;transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,21,42,.10)}
+.card .hd{padding:16px 20px;color:#fff;font-weight:800;font-size:18px}
+.card .bd{padding:16px 20px}
+.card .bd ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.card .bd li{font-size:13.5px;color:var(--ink2);padding-left:15px;position:relative}
+.card .bd li:before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:2px;background:var(--cc)}
+.card .go{margin-top:14px;font-size:13px;font-weight:700;color:var(--cc);display:inline-flex;gap:6px}
+.coreblk{background:var(--ink);color:#fff}
+.coreblk .eyebrow{color:#c9a9e8}.coreblk h2{color:#fff}.coreblk .sec-head p{color:#c7c9de}
+.eng{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.eng .e{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px}
+.eng .e .n{font-size:20px;font-weight:800}.eng .e p{color:#c7c9de;font-size:13px;margin-top:8px}
+.tbro{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:14px;overflow:hidden;margin-top:8px}
+.tbro .ph{padding:20px 18px;color:#fff}
+.tbro .ph .n{font-size:17px;font-weight:800}.tbro .ph .f{font-size:12px;opacity:.9;margin:2px 0 10px}
+.tbro .ph .li{font-size:11px;opacity:.92;line-height:1.7}
+.impact{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.impact .m .n{font-size:34px;font-weight:800;background:linear-gradient(100deg,var(--purple),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.impact .m .l{font-size:13px;color:var(--muted)}
+.ctaband{background:linear-gradient(100deg,var(--purple),var(--blue));border-radius:24px;padding:48px 44px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.ctaband h2{color:#fff;max-width:600px}.ctaband .btn{background:#fff;color:var(--purple)}
+footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 0 28px}
+.fgrid{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:28px}
+.fcol h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.fcol a{display:block;font-size:14px;color:var(--ink2);padding:4px 0}.fcol a:hover{color:var(--purple)}
+.fbot{display:flex;justify-content:space-between;margin-top:34px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;gap:8px}
+.fbot small{color:var(--muted);font-size:12.5px}.draft{font-size:11px;color:#b58900;background:#fff8e1;border:1px solid #f2e2a8;padding:3px 9px;border-radius:999px}
+/* landing */
+.lhero{color:#fff;position:relative;overflow:hidden;padding:78px 0 68px}
+.lhero .crumb{font-size:12px;opacity:.85;margin-bottom:14px}
+.lhero h1{margin-bottom:14px}.lhero .promise{font-size:20px;max-width:600px;opacity:.97}
+.lhero .meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.lhero .chip{font-size:12px;padding:7px 13px;border-radius:22px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);font-weight:600}
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.svc .s{border:1px solid var(--line);border-radius:14px;padding:20px 22px;border-left:4px solid var(--cc);background:#fff}
+.svc .s .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.svc .s h3{font-size:16px}
+.svc .s .tag{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.svc .s p{font-size:13.5px;margin-top:6px}
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 30px}
+.why .w h3{font-size:16px;color:var(--cc)}.why .w p{font-size:14px;margin-top:4px}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.proof .p{border:1px solid var(--line);border-radius:14px;padding:20px;border-top:4px solid var(--cc)}
+.proof .p .n{font-size:26px;font-weight:800;color:var(--cc)}.proof .p .l{font-size:12px;color:var(--muted)}
+.proof .p .d{font-size:13px;margin-top:8px;color:var(--ink2)}
+.reveal{opacity:0;transform:translateY(16px);transition:.6s}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media(max-width:900px){.menu,.navr .btn-ghost{display:none}.ham{display:flex}
+ .grid3,.eng,.impact,.svc,.why,.proof{grid-template-columns:1fr}.tbro{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}
+</style></head>
+<body><div style="--ac:var(--orange)"></div><header class="site"><div class="wrap nav"><a class="brand" href="index.html"><span class="mk"></span>Accion<span>labs</span></a>
+<ul class="menu">
+ <li id="m1"><a onclick="tg(1)">What We Do <i class="car"></i></a>
+  <div class="mega"><div class="gh" style="color:var(--purple)">We Enable</div><div class="gh" style="color:var(--green)">Foundation</div><a class="it" href="smarter-people.html" style="border-left-color:var(--orange)"><div class="t">Smarter People</div><div class="s">AI Copilots &amp; Knowledge Assistants  ·  Workforce Enablement &amp; Change Adoption  ·  Talent &amp; Skills Intelligence…</div></a><a class="it" href="smarter-products.html" style="border-left-color:var(--purple)"><div class="t">Smarter Products</div><div class="s">SaaS Product Development  ·  Re-engineering &amp; Modernization  ·  Product Portfolio Rationalization…</div></a><a class="it" href="smarter-processes.html" style="border-left-color:var(--blue)"><div class="t">Smarter Processes</div><div class="s">Business Process Transformation  ·  Robotic Process Automation  ·  API Management &amp; Integration…</div></a><a class="it" href="data.html" style="border-left-color:var(--red)"><div class="t">Data</div><div class="s">Data Platform Modernization  ·  Advanced Analytics &amp; Insights  ·  AI/ML Implementation…</div></a><a class="it" href="platforms.html" style="border-left-color:var(--green)"><div class="t">Platforms</div><div class="s">Cloud Migration &amp; Transformation  ·  Multi-cloud Strategy &amp; Management  ·  Enterprise Security &amp; Compliance…</div></a><a class="it" href="governance-assurance.html" style="border-left-color:var(--gray)"><div class="t">Governance &amp; Assurance</div><div class="s">AI Governance &amp; Responsible AI  ·  Model Risk, Evaluation &amp; Assurance  ·  Policy, Provenance &amp; Audit…</div></a></div></li>
+ <li id="m2"><a onclick="tg(2)">Our Core <i class="car"></i></a><div class="mega r"><div class="ch">Our Core</div><a class="it" href="our-core.html" style="border-left-color:var(--purple)"><div class="t">Semantic Engineering</div><div class="s">The engine inside every offering</div></a><a class="it" href="our-core.html#engines" style="border-left-color:var(--blue)"><div class="t">Breeze.AI · ASIMOV · SPEX</div><div class="s">The three AI engines</div></a><a class="it" href="our-core.html#tbro" style="border-left-color:var(--green)"><div class="t">Think · Build · Run · Optimize</div><div class="s">How we deliver</div></a></div></li>
+ <li><a href="case-studies.html">Case Studies</a></li>
+ <li><a href="#">Industries</a></li><li><a href="#">About</a></li>
+ <li><a href="#">Partners</a></li><li><a href="#">Insights</a></li>
+</ul>
+<div class="navr"><a class="btn btn-primary" href="#contact">Book a Consultation</a>
+<button class="ham" onclick="document.getElementById('mn').classList.toggle('show')"><span></span><span></span><span></span></button></div>
+</div>
+<div class="wrap mnav" id="mn"><a href="smarter-people.html">Smarter People</a><a href="smarter-products.html">Smarter Products</a><a href="smarter-processes.html">Smarter Processes</a><a href="data.html">Data</a><a href="platforms.html">Platforms</a><a href="governance-assurance.html">Governance &amp; Assurance</a><a href="our-core.html">Our Core</a><a href="case-studies.html">Case Studies</a><a href="#contact">Book an AI Strategy Consultation</a></div>
+</header><div class="lhero" style="background:radial-gradient(900px 460px at 85% -10%,rgba(255,255,255,.16),transparent 60%),linear-gradient(135deg,var(--orange) 0%,#14152A 130%)">
+<div class="wrap"><div class="crumb"><a href="index.html">Home</a> / <a href="index.html#our-core">What We Do</a> / Smarter People</div>
+<div class="eyebrow" style="color:rgba(255,255,255,.85)">Powered by ASIMOV</div>
+<h1>Smarter People</h1><p class="promise">Augment human capacity — copilots, low-code, and agentic workflows that elevate every role.</p>
+<div class="meta"><span class="chip">Built for CHRO, function leaders and heads of enablement</span></div></div></div><section class="blk" style="--cc:var(--orange);padding-bottom:40px"><div class="wrap"><div class="sec-head">
+<div class="eyebrow" style="--ac:var(--orange)">Overview</div><h2>Augment human capacity — copilots, low-code, and agentic workflows that elevate every role.</h2><p>The most powerful transformation in any organization isn&#x27;t technological — it&#x27;s human. Smarter People amplifies the capacity, creativity and judgment of your workforce with AI in the flow of work, so your people stop drowning in information and start acting on intelligence.</p></div></section><section class="blk" style="--cc:var(--orange);padding-top:0"><div class="wrap"><div class="eyebrow" style="--ac:var(--orange)">What we do</div>
+<h2 style="margin:10px 0 12px">How it works</h2><p style="max-width:760px">Role-specific copilots, governed low-code platforms and goal-driven agents put an expert assistant beside every employee — in finance, HR, marketing and sales alike — and turn new AI tools into sustained, measurable usage rather than shelfware.</p>
+<p style="max-width:760px;margin-top:14px"><strong>Semantic Engineering at the core.</strong> Semantic Engineering grounds every copilot in your enterprise knowledge graph, so assistants answer from your truth, not the open web. ASIMOV orchestrates the agentic workflows behind the copilots, and Breeze.AI gives engineering teams their own developer copilot.</p></div></section><section class="blk coreblk" style="--cc:var(--orange);background:var(--bg2);color:var(--ink)"><div class="wrap"><div class="sec-head">
+<div class="eyebrow" style="--ac:var(--orange)">Our services</div><h2 style="color:var(--ink)">What you can engage</h2></div><div class="svc"><div class="s" style="--cc:var(--orange)"><div class="top"><h3>AI Copilots &amp; Knowledge Assistants</h3><span class="tag" style="color:var(--green)">New</span></div><p>Role-specific copilots grounded in your enterprise knowledge graph, so every employee has an expert assistant in the flow of work.</p></div><div class="s" style="--cc:var(--orange)"><div class="top"><h3>Workforce Enablement &amp; Change Adoption</h3><span class="tag" style="color:var(--green)">New</span></div><p>Structured enablement, training and change management that turns new AI tools into real, sustained usage — not shelfware.</p></div><div class="s" style="--cc:var(--orange)"><div class="top"><h3>Talent &amp; Skills Intelligence</h3><span class="tag" style="color:var(--green)">New</span></div><p>AI-driven visibility into the skills you have and the skills your strategy needs, with clear paths to close the gap.</p></div><div class="s" style="--cc:var(--orange)"><div class="top"><h3>Low-Code / No-Code Development</h3><span class="tag" style="color:var(--muted)">Existing</span></div><p>Put building power in the hands of the business with governed platforms that let teams ship apps without waiting on a backlog.</p></div><div class="s" style="--cc:var(--orange)"><div class="top"><h3>Agentic Workflow Automation</h3><span class="tag" style="color:var(--muted)">Existing</span></div><p>Deploy autonomous, goal-driven agents (powered by ASIMOV) that take repetitive work off people&#x27;s plates and act across systems on their behalf.</p></div></div></div></section><section class="blk"><div class="wrap"><div class="sec-head"><div class="eyebrow" style="--ac:var(--orange)">Why Accion</div>
+<h2>Why teams choose Accion</h2></div><div class="why"><div class="w" style="--cc:var(--orange)"><h3>Grounded, not generic</h3><p>Copilots run on your knowledge graph through Semantic Engineering — answers cite your enterprise truth, not the open internet.</p></div><div class="w" style="--cc:var(--orange)"><h3>Adoption is the deliverable</h3><p>We measure success in sustained usage and outcomes, not licenses deployed — enablement and change are in scope from day one.</p></div><div class="w" style="--cc:var(--orange)"><h3>Agentic, under governance</h3><p>AI-powered agents act across systems with named ownership and validation gates, so autonomy stays safe.</p></div><div class="w" style="--cc:var(--orange)"><h3>Fractional skills model</h3><p>Right-sized, blended teams plug expert capacity in exactly where roles need lift — without permanent headcount drag.</p></div></div></div></section><section class="blk" style="padding-top:0"><div class="wrap"><div class="sec-head"><div class="eyebrow" style="--ac:var(--orange)">Proof</div>
+<h2>Results in the wild</h2></div><div class="proof"><div class="p" style="--cc:var(--orange)"><div class="n">40%</div><div class="l">less diagnostic research time</div><div class="d"><strong>Healthcare.</strong> A role-grounded knowledge assistant built on ECL-curated enterprise intelligence (L1), delivered in the clinician&#x27;s flow of work.</div></div></div></div></section><section class="blk" style="padding:56px 0" id="tbro"><div class="wrap"><div class="eyebrow" style="text-align:center;margin-bottom:14px">How we deliver</div><div class="tbro"><div class="ph" style="background:var(--purple)"><div class="n">Think</div><div class="f">Digital Strategy &amp; Innovation</div><div class="li">Strategic Planning · Digital Product Strategy · Data and AI/ML · Roadmap · Enterprise Architecture · Emerging Technology</div></div><div class="ph" style="background:var(--blue)"><div class="n">Build</div><div class="f">Software Development &amp; Engineering</div><div class="li">Architecture and Development · Cloud-Native Architecture · Full-Stack Product Development · API and Microservices · Enterprise Solutions · Modernization</div></div><div class="ph" style="background:var(--green)"><div class="n">Run</div><div class="f">Operations &amp; Management</div><div class="li">Cloud Management · Infrastructure Orchestration · Cost Management · Edge Computing · Performance and Security · Application Monitoring</div></div><div class="ph" style="background:var(--orange)"><div class="n">Optimize</div><div class="f">Performance Optimization &amp; Analytics</div><div class="li">Analytics and Insights · Product Analytics · Customer Journey Optimization · Predictive and Prescriptive Analytics · Continuous Improvement · A/B Testing</div></div></div></div></section><footer class="site"><div class="wrap"><div class="fgrid">
+<div><div class="brand" style="color:var(--ink)"><span class="mk"></span>Accion<span>labs</span></div>
+<p style="font-size:14px;color:var(--muted);margin-top:12px;max-width:280px">An AI-Led Innovation Engineering company, powered by Semantic Engineering.</p></div>
+<div class="fcol"><h4>What We Do</h4><a href="smarter-people.html">Smarter People</a><a href="smarter-products.html">Smarter Products</a><a href="smarter-processes.html">Smarter Processes</a><a href="data.html">Data</a><a href="platforms.html">Platforms</a><a href="governance-assurance.html">Governance &amp; Assurance</a></div>
+<div class="fcol"><h4>Our Core</h4><a href="our-core.html">Semantic Engineering</a><a href="our-core.html#engines">Breeze.AI</a><a href="our-core.html#engines">ASIMOV</a><a href="our-core.html#engines">SPEX</a></div>
+<div class="fcol"><h4>Company</h4><a href="case-studies.html">Case Studies</a><a href="#">Industries</a><a href="#">About</a><a href="#">Partners</a><a href="#" id="contact">Contact</a></div>
+</div><div class="fbot"><small>© 2026 Accion Labs. All Rights Reserved.</small><span class="draft">Design mockup · copy from approved v7.2</span></div></div></footer><script>
+function tg(n){['m1','m2'].forEach((id,i)=>{var el=document.getElementById(id);if(el){if(i+1==n)el.classList.toggle('open');else el.classList.remove('open');}});}
+document.addEventListener('click',e=>{if(!e.target.closest('.menu')){document.querySelectorAll('.menu>li').forEach(l=>l.classList.remove('open'));}});
+var io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script></body></html>

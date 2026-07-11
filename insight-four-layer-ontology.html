@@ -1,0 +1,189 @@
+<!DOCTYPE html><!-- DESIGN MOCKUP. Copy from approved v7.2. Segoe UI. -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Four-Layer Ontology for AI-Native Software Delivery | Accion Labs</title><meta name="description" content="Why AI agents need a queryable model of your software: four cross-linked ontology layers, named custodians, and governance that keeps the graph current."><style>
+:root{
+ --purple:#7B36AF;--blue:#1A4FC9;--green:#146800;--orange:#DF7028;--red:#B73734;--gray:#69737D;
+ --ink:#14152A;--ink2:#3a3b52;--muted:#6b7078;--line:#e7e7ef;--bg:#fff;--bg2:#f7f7fb;
+ --font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--maxw:1180px;--r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ac,var(--purple))}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em;font-weight:800}
+h1{font-size:clamp(32px,5vw,56px)}h2{font-size:clamp(24px,3.2vw,38px)}h3{font-size:19px;font-weight:700}
+p{color:var(--ink2)}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-weight:700;font-size:15px;padding:13px 22px;border-radius:999px;transition:transform .15s,box-shadow .15s,background .15s}
+.btn-primary{background:var(--purple);color:#fff;box-shadow:0 8px 22px rgba(123,54,175,.28)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--purple);color:var(--purple)}
+header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:21px}
+.brand .mk{width:20px;height:20px;clip-path:polygon(50% 0,100% 100%,0 100%);background:linear-gradient(135deg,var(--red),var(--purple))}
+.brand span{color:var(--gray)}
+.menu{display:flex;align-items:center;gap:20px}
+.menu>li{list-style:none;position:relative}
+.menu>li>a{display:flex;align-items:center;gap:5px;font-size:14px;font-weight:600;color:var(--ink2);padding:24px 0;cursor:pointer;white-space:nowrap}
+.menu>li>a:hover,.menu>li.open>a{color:var(--purple)}
+.car{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px}
+.mega{position:absolute;top:64px;left:0;width:720px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px rgba(20,21,42,.14);padding:22px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.18s;display:grid;grid-template-columns:1fr 1fr;gap:8px 26px}
+.mega.r{left:auto;right:0;width:420px;grid-template-columns:1fr}.mega.rw{left:auto;right:0;width:640px;grid-template-columns:1fr 1fr}
+.menu>li.open .mega{opacity:1;visibility:visible;transform:none}
+.mega .ch{grid-column:1/-1;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 0 2px}
+.mega .gh{grid-column:span 1;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:2px}
+.mega a.it{display:block;padding:9px 11px;border-radius:10px;border-left:3px solid transparent}
+.mega a.it:hover{background:var(--bg2)}
+.mega .it .t{font-weight:700;font-size:14.5px;color:var(--ink)}
+.mega .it .s{font-size:11.5px;color:var(--muted);margin-top:1px}
+.navr{display:flex;align-items:center;gap:12px}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.ham span{width:24px;height:2px;background:var(--ink);display:block}
+.mnav{display:none;padding:10px 0 18px;border-top:1px solid var(--line)}
+.mnav.show{display:block}.mnav a{display:block;padding:11px 4px;font-weight:600;border-bottom:1px solid var(--line);color:var(--ink2)}
+section.blk{padding:76px 0}
+.sec-head{max-width:720px;margin-bottom:40px}.sec-head h2{margin:10px 0}.sec-head p{font-size:17px}
+.hero{position:relative;overflow:hidden;padding:82px 0 66px;background:linear-gradient(180deg,#fff,var(--bg2))}
+.hero .gfx{position:absolute;right:-30px;top:20px;width:52%;max-width:600px;opacity:.9;z-index:0}
+.hero .wrap{position:relative;z-index:1;max-width:820px}
+.hero h1{margin:14px 0 16px}
+.hero h1 .g{background:linear-gradient(100deg,var(--purple),var(--blue) 55%,var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{font-size:clamp(17px,2vw,21px);max-width:640px}
+.cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden;transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,21,42,.10)}
+.card .hd{padding:16px 20px;color:#fff;font-weight:800;font-size:18px}
+.card .bd{padding:16px 20px}
+.card .bd ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.card .bd li{font-size:13.5px;color:var(--ink2);padding-left:15px;position:relative}
+.card .bd li:before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:2px;background:var(--cc)}
+.card .go{margin-top:14px;font-size:13px;font-weight:700;color:var(--cc);display:inline-flex;gap:6px}
+.coreblk{background:var(--ink);color:#fff}
+.coreblk .eyebrow{color:#c9a9e8}.coreblk h2{color:#fff}.coreblk .sec-head p{color:#c7c9de}
+.eng{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.eng .e{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px}
+.eng .e .n{font-size:20px;font-weight:800}.eng .e p{color:#c7c9de;font-size:13px;margin-top:8px}
+.tbro{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:14px;overflow:hidden;margin-top:8px}
+.tbro .ph{padding:20px 18px;color:#fff}
+.tbro .ph .n{font-size:17px;font-weight:800}.tbro .ph .f{font-size:12px;opacity:.9;margin:2px 0 10px}
+.tbro .ph .li{font-size:11px;opacity:.92;line-height:1.7}
+.impact{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.impact .m .n{font-size:34px;font-weight:800;background:linear-gradient(100deg,var(--purple),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.impact .m .l{font-size:13px;color:var(--muted)}
+.ctaband{background:linear-gradient(100deg,var(--purple),var(--blue));border-radius:24px;padding:48px 44px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.ctaband h2{color:#fff;max-width:600px}.ctaband .btn{background:#fff;color:var(--purple)}
+footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 0 28px}
+.fgrid{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:28px}
+.fcol h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.fcol a{display:block;font-size:14px;color:var(--ink2);padding:4px 0}.fcol a:hover{color:var(--purple)}
+.fbot{display:flex;justify-content:space-between;margin-top:34px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;gap:8px}
+.fbot small{color:var(--muted);font-size:12.5px}.draft{font-size:11px;color:#b58900;background:#fff8e1;border:1px solid #f2e2a8;padding:3px 9px;border-radius:999px}
+/* landing */
+.lhero{color:#fff;position:relative;overflow:hidden;padding:78px 0 68px}
+.lhero .crumb{font-size:12px;opacity:.85;margin-bottom:14px}
+.lhero h1{margin-bottom:14px}.lhero .promise{font-size:20px;max-width:600px;opacity:.97;color:#fff}
+.lhero .meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.lhero .chip{font-size:12px;padding:7px 13px;border-radius:22px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);font-weight:600}
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.svc .s{border:1px solid var(--line);border-radius:14px;padding:20px 22px;border-left:4px solid var(--cc);background:#fff}
+.svc .s .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.svc .s h3{font-size:16px}
+.svc .s .tag{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.svc .s p{font-size:13.5px;margin-top:6px}
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 30px}
+.why .w h3{font-size:16px;color:var(--cc)}.why .w p{font-size:14px;margin-top:4px}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.proof .p{border:1px solid var(--line);border-radius:14px;padding:20px;border-top:4px solid var(--cc)}
+.proof .p .n{font-size:26px;font-weight:800;color:var(--cc)}.proof .p .l{font-size:12px;color:var(--muted)}
+.proof .p .d{font-size:13px;margin-top:8px;color:var(--ink2)}
+.reveal{opacity:0;transform:translateY(16px);transition:.6s}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media(max-width:900px){.menu,.navr .btn-ghost{display:none}.ham{display:flex}
+ .grid3,.eng,.impact,.svc,.why,.proof{grid-template-columns:1fr}.tbro{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}
+
+/* page */ .art{max-width:760px;margin:0 auto}.art p{font-size:16.5px;line-height:1.75;color:var(--ink2);margin:14px 0}.art h2{font-size:26px;margin:34px 0 6px}.art h3{font-size:19px;margin:26px 0 4px}.art ul{margin:12px 0 12px 22px}.art li{font-size:16px;line-height:1.7;color:var(--ink2);margin:6px 0}.art .lede{font-size:19px;line-height:1.65;color:var(--ink)}
+.art .note{border:1px solid var(--line);border-left:4px solid var(--purple);border-radius:14px;padding:18px 22px;margin-top:38px;background:var(--bg2)}
+.art .note p{font-size:14.5px;margin:0}
+.art a{color:var(--purple);font-weight:600}
+</style></head>
+<body><div style="--ac:var(--orange)"></div><header class="site"><div class="wrap nav"><a class="brand" href="index.html"><span class="mk"></span>Accion<span>labs</span></a>
+<ul class="menu">
+ <li id="m1"><a onclick="tg(1)">What We Do <i class="car"></i></a>
+  <div class="mega"><div class="ch">Six Ways In, Each One a Standalone Engagement</div><a class="it" href="smarter-people.html" style="border-left-color:var(--orange)"><div class="t">Smarter People</div><div class="s">AI Copilots &amp; Knowledge Assistants  ·  Agentic Workflow Automation  ·  Workforce Enablement &amp; Change Adoption…</div></a><a class="it" href="smarter-products.html" style="border-left-color:var(--purple)"><div class="t">Smarter Products</div><div class="s">AI-Led Legacy Modernization  ·  AI-Enabled Tech Debt Reduction  ·  Agenticification of Product…</div></a><a class="it" href="smarter-processes.html" style="border-left-color:var(--blue)"><div class="t">Smarter Processes</div><div class="s">Intelligent Document Processing  ·  Process Mining &amp; Optimization  ·  Business Process Transformation…</div></a><a class="it" href="data.html" style="border-left-color:var(--red)"><div class="t">Smarter Data</div><div class="s">ML Model Creation &amp; Applications  ·  Data Platform Modernization  ·  Advanced Analytics &amp; Insights…</div></a><a class="it" href="platforms.html" style="border-left-color:var(--green)"><div class="t">Smarter Platform</div><div class="s">TokenOps  ·  Cloud Migration &amp; Transformation  ·  Multi-cloud Strategy &amp; Management…</div></a><a class="it" href="governance-assurance.html" style="border-left-color:var(--gray)"><div class="t">Smarter Assurance</div><div class="s">AI Governance &amp; Responsible AI  ·  Model Risk, Evaluation &amp; Assurance  ·  Policy, Provenance &amp; Audit…</div></a></div></li>
+ <li id="m2"><a onclick="tg(2)">Our Core <i class="car"></i></a><div class="mega r"><div class="ch">Our Core</div><a class="it" href="semantic-engineering.html" style="border-left-color:var(--purple)"><div class="t">Semantic Engineering</div><div class="s">The engine inside every offering</div></a><a class="it" href="our-core.html#engines" style="border-left-color:var(--blue)"><div class="t">IP &amp; Accelerators</div><div class="s">Seven engines, one governed core</div></a><a class="it" href="our-core.html#tbro" style="border-left-color:var(--green)"><div class="t">Think · Build · Run · Optimize</div><div class="s">How we deliver</div></a><a class="it" href="how-we-engage.html" style="border-left-color:var(--orange)"><div class="t">How We Engage</div><div class="s">Engagement models that fit the work</div></a></div></li>
+ <li id="m3"><a onclick="tg(3)">Industries <i class="car"></i></a><div class="mega r"><div class="ch">Industries &amp; Audiences</div><a class="it" href="bfsi-insurance.html" style="border-left-color:var(--blue)"><div class="t">BFSI &amp; Insurance</div><div class="s">Banking, financial services and insurance</div></a><a class="it" href="healthcare-life-sciences.html" style="border-left-color:var(--red)"><div class="t">Healthcare &amp; Life Sciences</div><div class="s">Providers, payers, pharma and med-tech</div></a><a class="it" href="pe-portfolios.html" style="border-left-color:var(--green)"><div class="t">For PE Portfolios</div><div class="s">Value creation across the portfolio</div></a><a class="it" href="product-companies.html" style="border-left-color:var(--purple)"><div class="t">For Product Companies</div><div class="s">AI-led product engineering at pace</div></a></div></li>
+ <li id="m4"><a onclick="tg(4)">Company <i class="car"></i></a><div class="mega rw"><div class="ch">Company</div><a class="it" href="about.html" style="border-left-color:var(--purple)"><div class="t">About Us</div><div class="s">Who we are and how we got here</div></a><a class="it" href="leadership.html" style="border-left-color:var(--blue)"><div class="t">Leadership</div><div class="s">The team behind the company</div></a><a class="it" href="values.html" style="border-left-color:var(--orange)"><div class="t">Values</div><div class="s">What we hold ourselves to</div></a><a class="it" href="careers.html" style="border-left-color:var(--green)"><div class="t">Careers</div><div class="s">Build with us</div></a><a class="it" href="gcc.html" style="border-left-color:var(--red)"><div class="t">Global Capability Centers</div><div class="s">GCC-as-a-service</div></a><a class="it" href="impact.html" style="border-left-color:var(--orange)"><div class="t">Social Impact</div><div class="s">Graminno, ESG and DEI</div></a><a class="it" href="technology-partners.html" style="border-left-color:var(--blue)"><div class="t">Technology Partners</div><div class="s">The platforms we build on</div></a><a class="it" href="resources.html" style="border-left-color:var(--purple)"><div class="t">Resources &amp; Events</div><div class="s">Innovation Summit, blogs and webinars</div></a></div></li>
+ <li><a href="case-studies.html">Case Studies</a></li>
+ <li><a href="insights.html">Insights</a></li>
+</ul>
+<div class="navr"><a class="btn btn-primary" href="contact.html">Book a Consultation</a>
+<button class="ham" onclick="document.getElementById('mn').classList.toggle('show')"><span></span><span></span><span></span></button></div>
+</div>
+<div class="wrap mnav" id="mn"><a href="smarter-people.html">Smarter People</a><a href="smarter-products.html">Smarter Products</a><a href="smarter-processes.html">Smarter Processes</a><a href="data.html">Smarter Data</a><a href="platforms.html">Smarter Platform</a><a href="governance-assurance.html">Smarter Assurance</a><a href="our-core.html">Our Core</a><a href="semantic-engineering.html">Semantic Engineering</a><a href="case-studies.html">Case Studies</a><a href="industries.html">Industries</a><a href="about.html">Company</a><a href="insights.html">Insights</a><a href="contact.html">Book a Consultation</a></div>
+</header><div class="lhero" style="background:radial-gradient(900px 460px at 85% -10%,rgba(255,255,255,.16),transparent 60%),linear-gradient(135deg,var(--purple) 0%,#14152A 130%)">
+<div class="wrap"><div class="crumb"><a href="index.html">Home</a> · <a href="insights.html">Insights</a> · Four-Layer Ontology</div>
+<h1>A Four-Layer Ontology for AI-Native Software Delivery</h1>
+<p class="promise">AI agents cannot make safe changes from a pile of documents. They need a queryable model of the system as it runs. This is the structure we build it in.</p>
+</div></div>
+
+<section class="blk" style="--cc:var(--purple)"><div class="wrap"><div class="art">
+
+<p class="lede">Ask an AI agent to make a safe, targeted change inside a 1.6 million line application and it needs to know which functions and modules carry the relevant behavior. Your documents cannot tell it: documentation describes the system as designed, and specs describe the system as the team wishes it were. The Semantic Knowledge Graph at the center of our <a href="semantic-engineering.html">Semantic Engineering</a> methodology describes the system as it runs, captured as four cross-linked ontology layers that stay current on every merge.</p>
+
+<h2>Why prompt stuffing fails first</h2>
+<p>Without a structured substrate, the only way to brief an agent is to feed it enough raw text to cover every case it might meet: the codebase plus the spec library. The richer the change, the larger the prompt. The larger the prompt, the higher the per-invocation cost, and the more likely the agent misses something buried in the middle, which triggers another round with more context. Token spend grows super-linearly with change complexity.</p>
+<p>A queryable graph inverts the economics. Each agent invocation pulls only the slice its task needs: the affected personas and outcomes, the architecture nodes the change crosses, the code modules involved. The rest stays in storage. Cost per change tracks the size of the change, not the size of everything around it.</p>
+
+<h2>Four layers, four named owners</h2>
+<p>Frederick Brooks called the shared theory of a system its design concept: the understanding everyone working on it carries in their head. The graph is that design concept made persistent and queryable instead of reconstructed in every conversation. It has four layers, each with a custodian accountable for keeping it honest.</p>
+<ul>
+<li><strong>Functional</strong>, owned by the product owner: personas, outcomes, scenarios, steps, and actions. When someone says users should be able to do X, this layer forces the question: which persona, which outcome, which scenario?</li>
+<li><strong>Design</strong>, owned by the UX designer and design system owner: user journeys, flows, and pages on one side; templates, organisms, molecules, and atoms on the other. It surfaces existing components before a team builds a duplicate and exposes drift between Figma and the running UI.</li>
+<li><strong>Architecture</strong>, owned by the architect and tech lead: an eight-layer blueprint spanning user experience, API gateway, services, agents, event queues, data stores, observability, and infrastructure. Boundary violations, such as a frontend calling a service straight past the gateway, surface as graph-shape violations during PR validation.</li>
+<li><strong>Code</strong>, owned by the engineering team: files, classes, functions, statements, and API endpoints, auto-generated from source by AST parsers on every merge to master, across ten supported languages including TypeScript, Java, Python, and C#.</li>
+</ul>
+<p>One rule binds all four. Every node carries a citation to the source document, Figma frame, Jira ticket, or code file that justifies its existence; a node without a citation does not enter the graph. That makes the graph audit-grade, and it lets agents diff the graph against its sources: when a ticket changes, agents know which nodes to re-validate.</p>
+
+<h2>What a real traversal returns</h2>
+<p>A product owner files a user story: let users choose daily, weekly, or no email alerts for each saved search. Before anyone writes code, the Impact Analysis Agent traverses all four layers and returns the full blast radius. Two outcomes modified and two scenarios added on the functional side. Three components and one new email template in design. Fourteen architecture nodes touched, including a new task family per region. Fifteen specific code changes across five repositories, plus the database column that already exists, so no schema change is required. The senior developer who used to assemble that picture by hand now reviews it instead.</p>
+<p>On a 1.6 million line application that query completes in about eight minutes. That number drives a structural decision: one graph per product, not a monolith across the portfolio. Monolithic graphs slow until queries stop being useful; per-product graphs stay fast, and specialized agents consult multiple graphs in sequence when a question crosses products.</p>
+
+<h2>Nobody writes this by hand</h2>
+<p>Brownfield adoption starts with extraction, not authoring. AST parsers generate the code layer. The architecture layer is inferred from code structure and cross-validated against whatever documentation exists. The functional layer is inferred from the enriched code graph, starting at the UI and following the code paths. The design layer comes from component code and wireframes, enriched by browser-automation agents that exercise the application end to end. For an application above two million lines of code, extraction typically completes in two to three weeks.</p>
+<p>Extraction also doubles as a rationalization audit the client did not have to budget for. Four patterns surface mechanically:</p>
+<ul>
+<li><strong>Duplicate capabilities.</strong> The same outcome built two or three times in different code paths, with no one aware the duplicates exist.</li>
+<li><strong>Split functionality.</strong> One outcome scattered across repositories with no shared abstraction and undocumented coordination between them.</li>
+<li><strong>Dead capabilities.</strong> Features still carried in the codebase that no live code path reaches.</li>
+<li><strong>Misclassified architecture.</strong> A service named billing that owns most of the user-profile logic.</li>
+</ul>
+<p>One client had organized its backends around functional domains, one team per domain, behind a single unified front end. After four to five years, the same outcomes had been implemented two or three times across those products. Extraction made the duplication visible and produced a prioritized cleanup backlog that flowed into normal sprint planning.</p>
+
+<h2>What keeps it from rotting</h2>
+<p>A graph nobody measures degrades the way wiki pages degrade. So the graph is governed like a production system. Fourteen verification checks run in CI; the highest-priority ones run on every merge and block it on failure. Twenty-nine metrics across six categories track growth, structure, connectivity, and architectural drift on release and quarterly cadences. A freshness rule enforces currency: any layer stale beyond thirty days auto-triggers a refresh sprint.</p>
+<p>Scope discipline matters as much as measurement. Teams that try to put everything into the graph drown in maintenance within a few sprints. The inclusion test is blast radius: an element enters the graph only when changing it would cascade across teams or layers. Personas, service boundaries, and integration contracts go in. Button copy, local styling overrides, and private helper methods stay out. The default is exclusion; the aperture widens deliberately over the first dozen sprints.</p>
+
+<h2>How it becomes operational</h2>
+<p>Our <a href="breeze-ai.html">Breeze.AI</a> platform maintains the product-partitioned graphs and runs the extraction, the metrics and verification framework, and the three impact analysis variants. Managed support tiers, Light through Deep, set how much of that cadence Accion runs alongside your own custodians.</p>
+
+<div class="note"><p>This article summarizes our published methodology for a business audience. The full practitioner version, with the aperture tables, metric thresholds, and verification checks, lives at <a href="https://semantic-engineering.ai/sdlc/methodology/">semantic-engineering.ai/sdlc/methodology</a>. More articles like this one are in our <a href="insights.html">Insights library</a>.</p></div>
+
+</div></div></section>
+
+<section class="blk" style="padding-top:0"><div class="wrap"><div class="ctaband">
+<h2>Find out what a four-layer graph of your system would surface.</h2><a class="btn btn-primary" href="contact.html">Book a consultation →</a></div></div></section><footer class="site"><div class="wrap"><div class="fgrid">
+<div><div class="brand" style="color:var(--ink)"><span class="mk"></span>Accion<span>labs</span></div>
+<p style="font-size:14px;color:var(--muted);margin-top:12px;max-width:280px">An AI-Led Innovation Engineering company, powered by Semantic Engineering.</p></div>
+<div class="fcol"><h4>What We Do</h4><a href="smarter-people.html">Smarter People</a><a href="smarter-products.html">Smarter Products</a><a href="smarter-processes.html">Smarter Processes</a><a href="data.html">Smarter Data</a><a href="platforms.html">Smarter Platform</a><a href="governance-assurance.html">Smarter Assurance</a></div>
+<div class="fcol"><h4>Our Core</h4><a href="semantic-engineering.html">Semantic Engineering</a><a href="breeze-ai.html">Breeze.AI</a><a href="asimov.html">ASIMOV</a><a href="spex.html">SPEX</a><a href="our-core.html#engines">All IP &amp; Accelerators</a><a href="how-we-engage.html">How We Engage</a></div>
+<div class="fcol"><h4>Company</h4><a href="about.html">About Us</a><a href="leadership.html">Leadership</a><a href="careers.html">Careers</a><a href="industries.html">Industries</a><a href="technology-partners.html">Technology Partners</a><a href="case-studies.html">Case Studies</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a></div>
+</div><div class="fbot"><small>© 2026 Accion Labs. All Rights Reserved.</small><span class="draft">Design mockup · copy from approved v7.2</span></div></div></footer><script>
+function tg(n){['m1','m2','m3','m4'].forEach((id,i)=>{var el=document.getElementById(id);if(el){if(i+1==n)el.classList.toggle('open');else el.classList.remove('open');}});}
+document.addEventListener('click',e=>{if(!e.target.closest('.menu')){document.querySelectorAll('.menu>li').forEach(l=>l.classList.remove('open'));}});
+var io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script></body></html>

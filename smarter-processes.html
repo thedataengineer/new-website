@@ -1,9 +1,9 @@
 <!DOCTYPE html><!-- DESIGN MOCKUP. Copy from approved v7.2. Segoe UI. -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Smarter Processes | Accion Labs</title><meta name="description" content="Re-wire how work flows, with intelligent automation that removes friction end to end."><style>
+<title>Smarter Processes | Accion Labs</title><meta name="description" content="Re-wire how work flows: intelligent automation that removes friction end to end."><style>
 :root{
  --purple:#7B36AF;--blue:#1A4FC9;--green:#146800;--orange:#DF7028;--red:#B73734;--gray:#69737D;
- --ink:#14152A;--ink2:#3a3b52;--muted:#6b7078;--line:#e7e7ef;--bg:#fff;--bg2:#f7f7fb;
+ --dark:#1A1A2E;--ink:#14152A;--ink2:#3a3b52;--muted:#6b7078;--line:#e7e7ef;--bg:#fff;--bg2:#f7f7fb;
  --font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--maxw:1180px;--r:16px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -32,7 +32,11 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);ba
 .car{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px}
 .mega{position:absolute;top:64px;left:0;width:720px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px rgba(20,21,42,.14);padding:22px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.18s;display:grid;grid-template-columns:1fr 1fr;gap:8px 26px}
 .mega.r{left:auto;right:0;width:420px;grid-template-columns:1fr}.mega.rw{left:auto;right:0;width:640px;grid-template-columns:1fr 1fr}
-.menu>li.open .mega{opacity:1;visibility:visible;transform:none}
+.menu>li.open .mega,.menu>li:hover .mega{opacity:1;visibility:visible;transform:none}
+.mega.core2{width:660px;left:auto;right:0;grid-template-columns:1.25fr 1fr;align-items:start}
+.mega.core2.single{left:0;right:auto;width:360px;grid-template-columns:1fr}
+.mcx{display:flex;flex-direction:column;gap:2px}
+.mcx .ch{margin:0 0 2px}
 .mega .ch{grid-column:1/-1;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 0 2px}
 .mega .gh{grid-column:span 1;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:2px}
 .mega a.it{display:block;padding:9px 11px;border-radius:10px;border-left:3px solid transparent}
@@ -46,6 +50,7 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);ba
 .mnav.show{display:block}.mnav a{display:block;padding:11px 4px;font-weight:600;border-bottom:1px solid var(--line);color:var(--ink2)}
 section.blk{padding:76px 0}
 .sec-head{max-width:720px;margin-bottom:40px}.sec-head h2{margin:10px 0}.sec-head p{font-size:17px}
+.we-lede{font-size:clamp(19px,2.3vw,26px);font-weight:600;line-height:1.4;color:var(--ink);max-width:900px}.we-lede a{color:var(--purple);border-bottom:2px solid var(--purple);font-weight:700}
 .hero{position:relative;overflow:hidden;padding:82px 0 66px;background:linear-gradient(180deg,#fff,var(--bg2))}
 .hero .gfx{position:absolute;right:-30px;top:20px;width:52%;max-width:600px;opacity:.9;z-index:0}
 .hero .wrap{position:relative;z-index:1;max-width:820px}
@@ -62,20 +67,20 @@ section.blk{padding:76px 0}
 .card .bd li{font-size:13.5px;color:var(--ink2);padding-left:15px;position:relative}
 .card .bd li:before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:2px;background:var(--cc)}
 .card .go{margin-top:14px;font-size:13px;font-weight:700;color:var(--cc);display:inline-flex;gap:6px}
-.coreblk{background:var(--ink);color:#fff}
-.coreblk .eyebrow{color:#c9a9e8}.coreblk h2{color:#fff}.coreblk .sec-head p{color:#c7c9de}
+.coreblk{background:var(--bg2);color:var(--ink)}
+.coreblk .eyebrow{color:var(--ac,var(--purple))}.coreblk h2{color:var(--ink)}.coreblk .sec-head p{color:var(--ink2)}
 .eng{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
 .eng .e{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px}
 .eng .e .n{font-size:20px;font-weight:800}.eng .e p{color:#c7c9de;font-size:13px;margin-top:8px}
 .tbro{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:14px;overflow:hidden;margin-top:8px}
-.tbro .ph{padding:20px 18px;color:#fff}
-.tbro .ph .n{font-size:17px;font-weight:800}.tbro .ph .f{font-size:12px;opacity:.9;margin:2px 0 10px}
-.tbro .ph .li{font-size:11px;opacity:.92;line-height:1.7}
+.tbro .ph{padding:22px 18px;color:#fff;text-decoration:none;display:block;transition:filter .15s}
+.tbro a.ph:hover{filter:brightness(1.08)}
+.tbro .ph .n{font-size:17px;font-weight:800}.tbro .ph .f{font-size:12px;opacity:.9;margin:2px 0 12px}
+.tbro .ph .go2{font-size:12px;font-weight:700;opacity:.95}
 .impact{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .impact .m .n{font-size:34px;font-weight:800;background:linear-gradient(100deg,var(--purple),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
 .impact .m .l{font-size:13px;color:var(--muted)}
-.ctaband{background:linear-gradient(100deg,var(--purple),var(--blue));border-radius:24px;padding:48px 44px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.ctaband h2{color:#fff;max-width:600px}.ctaband .btn{background:#fff;color:var(--purple)}
+.ctaband-old{display:none}
 footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 0 28px}
 .fgrid{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:28px}
 .fcol h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
@@ -83,11 +88,21 @@ footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 
 .fbot{display:flex;justify-content:space-between;margin-top:34px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;gap:8px}
 .fbot small{color:var(--muted);font-size:12.5px}.draft{font-size:11px;color:#b58900;background:#fff8e1;border:1px solid #f2e2a8;padding:3px 9px;border-radius:999px}
 /* landing */
-.lhero{color:#fff;position:relative;overflow:hidden;padding:78px 0 68px}
-.lhero .crumb{font-size:12px;opacity:.85;margin-bottom:14px}
-.lhero h1{margin-bottom:14px}.lhero .promise{font-size:20px;max-width:600px;opacity:.97;color:#fff}
+.lhero{color:var(--ink);position:relative;overflow:hidden;padding:74px 0 60px;border-bottom:1px solid var(--line)}
+.lhero .crumb{font-size:12px;color:var(--muted);margin-bottom:14px}.lhero .crumb a{color:var(--muted)}
+.lhero .eyebrow{color:var(--ac,var(--purple)) !important}
+.lhero h1{margin-bottom:6px;color:var(--ink)}.lhero .tagline{font-size:clamp(20px,2.6vw,30px);font-weight:800;letter-spacing:-.01em;margin:0 0 12px;color:var(--ink)}
+.lhero .promise{font-size:18px;max-width:640px;color:var(--ink2)}
+.lhero .accent{display:inline-block;width:52px;height:4px;border-radius:3px;margin-bottom:18px}
 .lhero .meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
-.lhero .chip{font-size:12px;padding:7px 13px;border-radius:22px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);font-weight:600}
+.lhero .chip{border:1px solid var(--line);color:var(--ink2);background:#fff}
+.ctaband{padding:52px 0;color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ctaband .ctain{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ctaband h2{color:var(--ink);font-size:clamp(22px,2.6vw,30px);margin:0}
+.ctaband p{color:var(--ink2);margin:8px 0 0;max-width:660px;font-size:16px}
+.btn-cta{color:#fff;font-weight:800;padding:15px 28px;border-radius:10px;white-space:nowrap}
+.btn-cta:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(20,21,42,.18)}
+.lhero .chip{font-size:12px;padding:7px 13px;border-radius:22px;background:#fff;border:1px solid var(--line);color:var(--ink2);font-weight:600}
 .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .svc .s{border:1px solid var(--line);border-radius:14px;padding:20px 22px;border-left:4px solid var(--cc);background:#fff}
 .svc .s .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
@@ -100,10 +115,24 @@ footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 
 .proof .p{border:1px solid var(--line);border-radius:14px;padding:20px;border-top:4px solid var(--cc)}
 .proof .p .n{font-size:26px;font-weight:800;color:var(--cc)}.proof .p .l{font-size:12px;color:var(--muted)}
 .proof .p .d{font-size:13px;margin-top:8px;color:var(--ink2)}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pegrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.pecard{border:1px solid var(--line);border-top:4px solid var(--cc,var(--purple));border-radius:12px;padding:16px 16px 8px;background:#fff}
+.pecard h3{font-size:14px;margin-bottom:8px;color:var(--ink)}
+.pecard ul{list-style:none;padding:0;margin:0}
+.pecard li{font-size:13px;color:var(--ink2);padding:5px 0 5px 14px;position:relative}
+.pecard li:before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:1px;background:var(--cc,var(--purple))}
+.links-row{display:flex;gap:12px;flex-wrap:wrap}
+.lchip{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--cc,var(--purple));color:var(--cc,var(--purple));font-weight:700;font-size:14px;padding:11px 18px;border-radius:999px}
+.lchip:hover{background:var(--cc,var(--purple));color:#fff}
+.ins{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.ins a{display:block;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-weight:600;color:var(--ink)}
+.ins a:hover{border-color:var(--cc,var(--purple));color:var(--cc,var(--purple))}
+.ins a .k{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
 .reveal{opacity:0;transform:translateY(16px);transition:.6s}.reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 @media(max-width:900px){.menu,.navr .btn-ghost{display:none}.ham{display:flex}
- .grid3,.eng,.impact,.svc,.why,.proof{grid-template-columns:1fr}.tbro{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}
+ .grid3,.eng,.impact,.svc,.why,.proof,.cgrid,.ins,.pegrid{grid-template-columns:1fr}.tbro{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}
 </style></head>
 <body><div style="--ac:var(--blue)"></div><header class="site"><div class="wrap nav"><a class="brand" href="index.html"><span class="mk"></span>Accion<span>labs</span></a>
 <ul class="menu">
@@ -119,19 +148,21 @@ footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 
 <button class="ham" onclick="document.getElementById('mn').classList.toggle('show')"><span></span><span></span><span></span></button></div>
 </div>
 <div class="wrap mnav" id="mn"><a href="smarter-people.html">Smarter People</a><a href="smarter-products.html">Smarter Products</a><a href="smarter-processes.html">Smarter Processes</a><a href="data.html">Smarter Data</a><a href="platforms.html">Smarter Platform</a><a href="governance-assurance.html">Smarter Assurance</a><a href="our-core.html">Our Core</a><a href="semantic-engineering.html">Semantic Engineering</a><a href="case-studies.html">Case Studies</a><a href="industries.html">Industries</a><a href="about.html">Company</a><a href="insights.html">Insights</a><a href="contact.html">Book a Consultation</a></div>
-</header><div class="lhero" style="background:radial-gradient(900px 460px at 85% -10%,rgba(255,255,255,.16),transparent 60%),linear-gradient(135deg,var(--blue) 0%,#14152A 130%)">
-<div class="wrap"><div class="crumb"><a href="index.html">Home</a> / <a href="index.html#our-core">What We Do</a> / Smarter Processes</div>
-<div class="eyebrow" style="color:rgba(255,255,255,.85)">Powered by SPEX</div>
-<h1>Smarter Processes</h1><p class="promise">Re-wire how work flows, with intelligent automation that removes friction end to end.</p>
+</header><div class="lhero" style="background:radial-gradient(1100px 520px at 88% -25%,rgba(26,79,201,0.14) 0%,transparent 62%),linear-gradient(160deg,rgba(26,79,201,0.12) 0%,rgba(26,79,201,0.04) 34%,#ffffff 66%)">
+<div class="wrap"><div class="crumb"><a href="index.html">Home</a> / <a href="index.html#we-enable">We Enable</a> / Smarter Processes</div>
+<span class="accent" style="background:var(--blue)"></span>
+<div class="eyebrow">Smarter Processes - Powered by SPEX</div>
+<h1>Smarter Processes</h1><p class="tagline">Operations without the friction.</p><p class="promise">Re-wire how work flows: intelligent automation that removes friction end to end.</p>
 <div class="meta"><span class="chip">Built for COO, shared-services and operations leaders</span></div></div></div><section class="blk" style="--cc:var(--blue);padding-bottom:40px"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">Overview</div><h2>Re-wire how work flows, with intelligent automation that removes friction end to end.</h2><p>Most enterprises run on processes designed for a pre-AI world. Smarter Processes re-wires how work flows, combining automation, integration and intelligence to remove friction end to end, not just digitize the steps that were already there.</p></div></section><section class="blk" style="--cc:var(--blue);padding-top:0"><div class="wrap"><div class="eyebrow" style="--ac:var(--blue)">What we do</div>
+<div class="eyebrow" style="--ac:var(--blue)">Overview</div><h2>Re-wire how work flows: intelligent automation that removes friction end to end.</h2><p>Most enterprises run on processes designed for a pre-AI world. Smarter Processes re-wires how work flows, combining automation, integration and intelligence to remove friction end to end, not just digitize the steps that were already there.</p></div></section><section class="blk" style="--cc:var(--blue);padding-top:0"><div class="wrap"><div class="eyebrow" style="--ac:var(--blue)">What we do</div>
 <h2 style="margin:10px 0 12px">How it works</h2><p style="max-width:760px">We start from evidence: process mining shows where work really breaks down, then we engineer the friction out with RPA, intelligent document processing and SPEX-powered agentic automation that acts across systems, governed by Semantic Engineering.</p>
-<p style="max-width:760px;margin-top:14px"><strong>Semantic Engineering at the core.</strong> Process knowledge, including steps, rules, exceptions and ownership, lives in the Semantic Engineering graph, so SPEX agents automate against the real process under validation gates, not a stale diagram.</p></div></section><section class="blk coreblk" style="--cc:var(--blue);background:var(--bg2);color:var(--ink)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">Our services</div><h2 style="color:var(--ink)">What you can engage</h2></div><div class="svc"><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Intelligent Document Processing</h3></div><p>Turn unstructured documents, including contracts, invoices and forms, into structured, actionable data automatically, powered by Semantic.AI.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think · Build · Run · Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Process Mining &amp; Optimization</h3></div><p>Discover where work breaks down using evidence from your systems, then engineer the friction out.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think · Build · Run · Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Business Process Transformation</h3></div><p>Redesign core processes around AI-native ways of working, rather than digitizing the old ones.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think · Build · Run · Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Robotic Process Automation</h3></div><p>Automate high-volume, rules-based work at scale to cut cost, errors and cycle time.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think · Build · Run · Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>API Management &amp; Integration</h3></div><p>Connect systems, data and partners into secure, well-governed flows.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think · Build · Run · Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Application Managed Services</h3></div><p>Operate and support your applications after go-live, with SLA-backed run, maintenance and continuous improvement, so the estate stays healthy without growing your team.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>MLOps / LLMOps</h3></div><p>Put models into production and keep them there, with pipelines for training, deployment, monitoring and retraining across ML and LLM workloads.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Healthcare RCM &amp; PBM Services</h3></div><p>Run revenue-cycle and pharmacy-benefit operations, from claims and pricing to contracting, combining domain workflows with automation.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div></div></div></section><section class="blk"><div class="wrap"><div class="sec-head"><div class="eyebrow" style="--ac:var(--blue)">Why Accion</div>
-<h2>Why teams choose Accion</h2></div><div class="why"><div class="w" style="--cc:var(--blue)"><h3>Evidence before automation</h3><p>We mine the real process from system data first, so we automate what&#x27;s broken, not the org chart&#x27;s idea of it.</p></div><div class="w" style="--cc:var(--blue)"><h3>Agentic, not just robotic</h3><p>Beyond rules-based RPA, SPEX agents handle exceptions and act across systems toward a goal, under validation gates.</p></div><div class="w" style="--cc:var(--blue)"><h3>Unstructured to structured</h3><p>Intelligent Document Processing turns the messy inputs that stall processes into clean, governed data automatically.</p></div><div class="w" style="--cc:var(--blue)"><h3>Integration that lasts</h3><p>Well-governed API management makes the re-wired flow durable and secure, not a brittle set of bots.</p></div></div></div></section><section class="blk" style="padding-top:0"><div class="wrap"><div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;border:1px solid var(--line);border-radius:14px;padding:24px 28px;max-width:760px;margin:0 auto">
-<div style="flex:0 0 auto"><div style="font-size:34px;font-weight:800;color:var(--blue)">18 sec</div><div style="font-size:12px;color:var(--muted)">to approve $500K wires</div></div>
-<div style="flex:1 1 240px"><p style="margin:0;font-size:14px"><strong>Financial Services.</strong> SPEX multi-agent orchestration replaced manual processing across 5 legacy systems.</p><a class="btn btn-ghost" style="margin-top:10px;padding:8px 16px;font-size:13px" href="case-studies.html#processes">Read the full case study →</a></div>
-</div></div></section><section class="blk" style="padding:56px 0" id="tbro"><div class="wrap"><h2 style="text-align:center;margin-bottom:14px">How we deliver</h2><div class="tbro"><div class="ph" style="background:var(--purple)"><div class="n">Think</div><div class="f">Digital Strategy &amp; Innovation</div><div class="li">Strategic Planning · Digital Product Strategy · Data and AI/ML · Roadmap · Enterprise Architecture · Emerging Technology</div></div><div class="ph" style="background:var(--blue)"><div class="n">Build</div><div class="f">Software Development &amp; Engineering</div><div class="li">Architecture and Development · Cloud-Native Architecture · Full-Stack Product Development · API and Microservices · Enterprise Solutions · Modernization</div></div><div class="ph" style="background:var(--green)"><div class="n">Run</div><div class="f">Operations &amp; Management</div><div class="li">Cloud Management · Infrastructure Orchestration · Cost Management · Edge Computing · Performance and Security · Application Monitoring</div></div><div class="ph" style="background:var(--orange)"><div class="n">Optimize</div><div class="f">Performance Optimization &amp; Analytics</div><div class="li">Analytics and Insights · Product Analytics · Customer Journey Optimization · Predictive and Prescriptive Analytics · Continuous Improvement · A/B Testing</div></div></div></div></section><footer class="site"><div class="wrap"><div class="fgrid">
+<p style="max-width:760px;margin-top:14px"><strong>Semantic Engineering at the core.</strong> Process knowledge, steps, rules, exceptions and ownership, lives in the Semantic Engineering graph, so SPEX agents automate against the real process under validation gates, not a stale diagram.</p></div></section><section class="blk coreblk" style="--cc:var(--blue);background:var(--bg2);color:var(--ink)"><div class="wrap"><div class="sec-head">
+<div class="eyebrow" style="--ac:var(--blue)">Our services</div><h2 style="color:var(--ink)">What you can engage</h2></div><div class="svc"><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Intelligent Document Processing</h3></div><p>Turn unstructured documents such as contracts, invoices and forms into structured, actionable data automatically.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Process Mining &amp; Optimization</h3></div><p>Discover where work breaks down using evidence from your systems, then engineer the friction out.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Business Process Transformation</h3></div><p>Redesign core processes around AI-native ways of working, rather than digitizing the old ones.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Robotic Process Automation</h3></div><p>Automate high-volume, rules-based work at scale to cut cost, errors and cycle time.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>API Management &amp; Integration</h3></div><p>Connect systems, data and partners into secure, well-governed flows.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Application Managed Services</h3></div><p>Operate and support your applications after go-live, with SLA-backed run, maintenance and continuous improvement, so the estate stays healthy without growing your team.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>MLOps / LLMOps</h3></div><p>Put models into production and keep them there, with pipelines for training, deployment, monitoring and retraining across ML and LLM workloads.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div><div class="s" style="--cc:var(--blue)"><div class="top"><h3>Healthcare RCM &amp; PBM Services</h3></div><p>Run revenue-cycle and pharmacy-benefit operations, from claims and pricing to contracting, combining domain workflows with automation.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Think &#183; Build &#183; Run &#183; Optimize</div></div></div></div></section><section class="blk" style="--cc:var(--blue);padding-top:0"><div class="wrap"><div class="sec-head">
+<div class="eyebrow" style="--ac:var(--blue)">Managed services</div><h2>Keep it running, and improving</h2>
+<p style="max-width:760px">Pair Smarter Processes with our managed services to run and evolve what we build together.</p></div>
+<div class="links-row"><a class="lchip" href="platforms.html" style="--cc:var(--blue)">IT &amp; Application Managed Services</a><a class="lchip" href="smarter-products.html" style="--cc:var(--blue)">Product Managed Services</a></div></div></section><section class="blk"><div class="wrap"><div class="sec-head"><div class="eyebrow" style="--ac:var(--blue)">Why Accion</div>
+<h2>Why teams choose Accion</h2></div><div class="why"><div class="w" style="--cc:var(--blue)"><h3>Evidence before automation</h3><p>We mine the real process from system data first, so we automate what&#x27;s broken, not the org chart&#x27;s idea of it.</p></div><div class="w" style="--cc:var(--blue)"><h3>Agentic, not just robotic</h3><p>Beyond rules-based RPA, SPEX agents handle exceptions and act across systems toward a goal, under validation gates.</p></div><div class="w" style="--cc:var(--blue)"><h3>Unstructured to structured</h3><p>Intelligent Document Processing turns the messy inputs that stall processes into clean, governed data automatically.</p></div><div class="w" style="--cc:var(--blue)"><h3>Integration that lasts</h3><p>Well-governed API management makes the re-wired flow durable and secure, not a brittle set of bots.</p></div></div></div></section><section class="blk" style="padding-top:0"><div class="wrap"><div class="sec-head"><div class="eyebrow" style="--ac:var(--blue)">Business Impact</div>
+<h2>Value Delivered</h2></div><div class="proof"><div class="p" style="--cc:var(--blue)"><div class="n">18 sec</div><div class="l">to approve $500K wires</div><div class="d"><strong>Financial Services.</strong> SPEX multi-agent orchestration with a Layer 1 knowledge graph (L1 + L2).</div></div></div></div></section><section class="ctaband" style="background:radial-gradient(1100px 520px at 88% -25%,rgba(26,79,201,0.14) 0%,transparent 62%),linear-gradient(160deg,rgba(26,79,201,0.12) 0%,rgba(26,79,201,0.04) 34%,#ffffff 66%)"><div class="wrap ctain"><div><h2>Take the friction out of operations</h2><p>See where process mining and agents can remove cost and cycle time.</p></div><a class="btn btn-cta" style="background:var(--blue)" href="contact.html">Book a process assessment</a></div></section><footer class="site"><div class="wrap"><div class="fgrid">
 <div><div class="brand" style="color:var(--ink)"><span class="mk"></span>Accion<span>labs</span></div>
 <p style="font-size:14px;color:var(--muted);margin-top:12px;max-width:280px">An AI-Led Innovation Engineering company, powered by Semantic Engineering.</p></div>
 <div class="fcol"><h4>What We Do</h4><a href="smarter-people.html">Smarter People</a><a href="smarter-products.html">Smarter Products</a><a href="smarter-processes.html">Smarter Processes</a><a href="data.html">Smarter Data</a><a href="platforms.html">Smarter Platform</a><a href="governance-assurance.html">Smarter Assurance</a></div>

@@ -1,9 +1,9 @@
 <!DOCTYPE html><!-- DESIGN MOCKUP. Copy from approved v7.2. Segoe UI. -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ASIMOV | Accion Labs</title><meta name="description" content="ASIMOV is Accion Labs' agentic legacy modernization platform. It extracts a governed model of a legacy system and migrates it to a modern stack with behavioral parity."><style>
+<title>ASIMOV | Our Core | Accion Labs</title><meta name="description" content="ASIMOV is our legacy modernization platform. It extracts a governed model of a legacy system and drives modernization against it, so the work stays au"><style>
 :root{
  --purple:#7B36AF;--blue:#1A4FC9;--green:#146800;--orange:#DF7028;--red:#B73734;--gray:#69737D;
- --ink:#14152A;--ink2:#3a3b52;--muted:#6b7078;--line:#e7e7ef;--bg:#fff;--bg2:#f7f7fb;
+ --dark:#1A1A2E;--ink:#14152A;--ink2:#3a3b52;--muted:#6b7078;--line:#e7e7ef;--bg:#fff;--bg2:#f7f7fb;
  --font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--maxw:1180px;--r:16px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -32,7 +32,11 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);ba
 .car{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px}
 .mega{position:absolute;top:64px;left:0;width:720px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px rgba(20,21,42,.14);padding:22px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.18s;display:grid;grid-template-columns:1fr 1fr;gap:8px 26px}
 .mega.r{left:auto;right:0;width:420px;grid-template-columns:1fr}.mega.rw{left:auto;right:0;width:640px;grid-template-columns:1fr 1fr}
-.menu>li.open .mega{opacity:1;visibility:visible;transform:none}
+.menu>li.open .mega,.menu>li:hover .mega{opacity:1;visibility:visible;transform:none}
+.mega.core2{width:660px;left:auto;right:0;grid-template-columns:1.25fr 1fr;align-items:start}
+.mega.core2.single{left:0;right:auto;width:360px;grid-template-columns:1fr}
+.mcx{display:flex;flex-direction:column;gap:2px}
+.mcx .ch{margin:0 0 2px}
 .mega .ch{grid-column:1/-1;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 0 2px}
 .mega .gh{grid-column:span 1;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:2px}
 .mega a.it{display:block;padding:9px 11px;border-radius:10px;border-left:3px solid transparent}
@@ -46,6 +50,7 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);ba
 .mnav.show{display:block}.mnav a{display:block;padding:11px 4px;font-weight:600;border-bottom:1px solid var(--line);color:var(--ink2)}
 section.blk{padding:76px 0}
 .sec-head{max-width:720px;margin-bottom:40px}.sec-head h2{margin:10px 0}.sec-head p{font-size:17px}
+.we-lede{font-size:clamp(19px,2.3vw,26px);font-weight:600;line-height:1.4;color:var(--ink);max-width:900px}.we-lede a{color:var(--purple);border-bottom:2px solid var(--purple);font-weight:700}
 .hero{position:relative;overflow:hidden;padding:82px 0 66px;background:linear-gradient(180deg,#fff,var(--bg2))}
 .hero .gfx{position:absolute;right:-30px;top:20px;width:52%;max-width:600px;opacity:.9;z-index:0}
 .hero .wrap{position:relative;z-index:1;max-width:820px}
@@ -62,20 +67,20 @@ section.blk{padding:76px 0}
 .card .bd li{font-size:13.5px;color:var(--ink2);padding-left:15px;position:relative}
 .card .bd li:before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:2px;background:var(--cc)}
 .card .go{margin-top:14px;font-size:13px;font-weight:700;color:var(--cc);display:inline-flex;gap:6px}
-.coreblk{background:var(--ink);color:#fff}
-.coreblk .eyebrow{color:#c9a9e8}.coreblk h2{color:#fff}.coreblk .sec-head p{color:#c7c9de}
+.coreblk{background:var(--bg2);color:var(--ink)}
+.coreblk .eyebrow{color:var(--ac,var(--purple))}.coreblk h2{color:var(--ink)}.coreblk .sec-head p{color:var(--ink2)}
 .eng{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
 .eng .e{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px}
 .eng .e .n{font-size:20px;font-weight:800}.eng .e p{color:#c7c9de;font-size:13px;margin-top:8px}
 .tbro{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:14px;overflow:hidden;margin-top:8px}
-.tbro .ph{padding:20px 18px;color:#fff}
-.tbro .ph .n{font-size:17px;font-weight:800}.tbro .ph .f{font-size:12px;opacity:.9;margin:2px 0 10px}
-.tbro .ph .li{font-size:11px;opacity:.92;line-height:1.7}
+.tbro .ph{padding:22px 18px;color:#fff;text-decoration:none;display:block;transition:filter .15s}
+.tbro a.ph:hover{filter:brightness(1.08)}
+.tbro .ph .n{font-size:17px;font-weight:800}.tbro .ph .f{font-size:12px;opacity:.9;margin:2px 0 12px}
+.tbro .ph .go2{font-size:12px;font-weight:700;opacity:.95}
 .impact{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .impact .m .n{font-size:34px;font-weight:800;background:linear-gradient(100deg,var(--purple),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
 .impact .m .l{font-size:13px;color:var(--muted)}
-.ctaband{background:linear-gradient(100deg,var(--purple),var(--blue));border-radius:24px;padding:48px 44px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.ctaband h2{color:#fff;max-width:600px}.ctaband .btn{background:#fff;color:var(--purple)}
+.ctaband-old{display:none}
 footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 0 28px}
 .fgrid{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:28px}
 .fcol h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
@@ -83,11 +88,21 @@ footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 
 .fbot{display:flex;justify-content:space-between;margin-top:34px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;gap:8px}
 .fbot small{color:var(--muted);font-size:12.5px}.draft{font-size:11px;color:#b58900;background:#fff8e1;border:1px solid #f2e2a8;padding:3px 9px;border-radius:999px}
 /* landing */
-.lhero{color:#fff;position:relative;overflow:hidden;padding:78px 0 68px}
-.lhero .crumb{font-size:12px;opacity:.85;margin-bottom:14px}
-.lhero h1{margin-bottom:14px}.lhero .promise{font-size:20px;max-width:600px;opacity:.97;color:#fff}
+.lhero{color:var(--ink);position:relative;overflow:hidden;padding:74px 0 60px;border-bottom:1px solid var(--line)}
+.lhero .crumb{font-size:12px;color:var(--muted);margin-bottom:14px}.lhero .crumb a{color:var(--muted)}
+.lhero .eyebrow{color:var(--ac,var(--purple)) !important}
+.lhero h1{margin-bottom:6px;color:var(--ink)}.lhero .tagline{font-size:clamp(20px,2.6vw,30px);font-weight:800;letter-spacing:-.01em;margin:0 0 12px;color:var(--ink)}
+.lhero .promise{font-size:18px;max-width:640px;color:var(--ink2)}
+.lhero .accent{display:inline-block;width:52px;height:4px;border-radius:3px;margin-bottom:18px}
 .lhero .meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
-.lhero .chip{font-size:12px;padding:7px 13px;border-radius:22px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);font-weight:600}
+.lhero .chip{border:1px solid var(--line);color:var(--ink2);background:#fff}
+.ctaband{padding:52px 0;color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ctaband .ctain{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ctaband h2{color:var(--ink);font-size:clamp(22px,2.6vw,30px);margin:0}
+.ctaband p{color:var(--ink2);margin:8px 0 0;max-width:660px;font-size:16px}
+.btn-cta{color:#fff;font-weight:800;padding:15px 28px;border-radius:10px;white-space:nowrap}
+.btn-cta:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(20,21,42,.18)}
+.lhero .chip{font-size:12px;padding:7px 13px;border-radius:22px;background:#fff;border:1px solid var(--line);color:var(--ink2);font-weight:600}
 .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .svc .s{border:1px solid var(--line);border-radius:14px;padding:20px 22px;border-left:4px solid var(--cc);background:#fff}
 .svc .s .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
@@ -100,15 +115,26 @@ footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 
 .proof .p{border:1px solid var(--line);border-radius:14px;padding:20px;border-top:4px solid var(--cc)}
 .proof .p .n{font-size:26px;font-weight:800;color:var(--cc)}.proof .p .l{font-size:12px;color:var(--muted)}
 .proof .p .d{font-size:13px;margin-top:8px;color:var(--ink2)}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pegrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.pecard{border:1px solid var(--line);border-top:4px solid var(--cc,var(--purple));border-radius:12px;padding:16px 16px 8px;background:#fff}
+.pecard h3{font-size:14px;margin-bottom:8px;color:var(--ink)}
+.pecard ul{list-style:none;padding:0;margin:0}
+.pecard li{font-size:13px;color:var(--ink2);padding:5px 0 5px 14px;position:relative}
+.pecard li:before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:1px;background:var(--cc,var(--purple))}
+.links-row{display:flex;gap:12px;flex-wrap:wrap}
+.lchip{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--cc,var(--purple));color:var(--cc,var(--purple));font-weight:700;font-size:14px;padding:11px 18px;border-radius:999px}
+.lchip:hover{background:var(--cc,var(--purple));color:#fff}
+.ins{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.ins a{display:block;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-weight:600;color:var(--ink)}
+.ins a:hover{border-color:var(--cc,var(--purple));color:var(--cc,var(--purple))}
+.ins a .k{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
 .reveal{opacity:0;transform:translateY(16px);transition:.6s}.reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 @media(max-width:900px){.menu,.navr .btn-ghost{display:none}.ham{display:flex}
- .grid3,.eng,.impact,.svc,.why,.proof{grid-template-columns:1fr}.tbro{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}
-/* page */
-.tbro.p5{grid-template-columns:repeat(5,1fr)}
-@media(max-width:900px){.tbro.p5{grid-template-columns:1fr 1fr}}
+ .grid3,.eng,.impact,.svc,.why,.proof,.cgrid,.ins,.pegrid{grid-template-columns:1fr}.tbro{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}
 </style></head>
-<body><div style="--ac:var(--blue)"></div><header class="site"><div class="wrap nav"><a class="brand" href="index.html"><span class="mk"></span>Accion<span>labs</span></a>
+<body><header class="site"><div class="wrap nav"><a class="brand" href="index.html"><span class="mk"></span>Accion<span>labs</span></a>
 <ul class="menu">
  <li id="m1"><a onclick="tg(1)">What We Do <i class="car"></i></a>
   <div class="mega"><div class="ch">Six Ways In, Each One a Standalone Engagement</div><a class="it" href="smarter-people.html" style="border-left-color:var(--orange)"><div class="t">Smarter People</div><div class="s">AI Copilots &amp; Knowledge Assistants  ·  Agentic Workflow Automation  ·  Workforce Enablement &amp; Change Adoption…</div></a><a class="it" href="smarter-products.html" style="border-left-color:var(--purple)"><div class="t">Smarter Products</div><div class="s">AI-Led Legacy Modernization  ·  AI-Enabled Tech Debt Reduction  ·  Agenticification of Product…</div></a><a class="it" href="smarter-processes.html" style="border-left-color:var(--blue)"><div class="t">Smarter Processes</div><div class="s">Intelligent Document Processing  ·  Process Mining &amp; Optimization  ·  Business Process Transformation…</div></a><a class="it" href="data.html" style="border-left-color:var(--red)"><div class="t">Smarter Data</div><div class="s">AI-Readiness of Enterprise Data  ·  ML Model Creation &amp; Applications  ·  Data Platform Modernization…</div></a><a class="it" href="platforms.html" style="border-left-color:var(--green)"><div class="t">Smarter Platform</div><div class="s">TokenOps  ·  Cloud Migration &amp; Transformation  ·  Multi-cloud Strategy &amp; Management…</div></a><a class="it" href="governance-assurance.html" style="border-left-color:var(--gray)"><div class="t">Smarter Assurance</div><div class="s">AI Governance &amp; Responsible AI  ·  Model Risk, Evaluation &amp; Assurance  ·  Policy, Provenance &amp; Audit…</div></a></div></li>
@@ -122,118 +148,19 @@ footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 
 <button class="ham" onclick="document.getElementById('mn').classList.toggle('show')"><span></span><span></span><span></span></button></div>
 </div>
 <div class="wrap mnav" id="mn"><a href="smarter-people.html">Smarter People</a><a href="smarter-products.html">Smarter Products</a><a href="smarter-processes.html">Smarter Processes</a><a href="data.html">Smarter Data</a><a href="platforms.html">Smarter Platform</a><a href="governance-assurance.html">Smarter Assurance</a><a href="our-core.html">Our Core</a><a href="semantic-engineering.html">Semantic Engineering</a><a href="case-studies.html">Case Studies</a><a href="industries.html">Industries</a><a href="about.html">Company</a><a href="insights.html">Insights</a><a href="contact.html">Book a Consultation</a></div>
-</header><div class="lhero" style="background:radial-gradient(900px 460px at 85% -10%,rgba(255,255,255,.16),transparent 60%),linear-gradient(135deg,var(--blue) 0%,#14152A 130%)">
-<div class="wrap"><div class="crumb"><a href="index.html">Home</a> · <a href="our-core.html#engines">Our Core · IP &amp; Accelerators</a> · ASIMOV</div>
-<div class="eyebrow" style="color:rgba(255,255,255,.85)">Agentic Legacy Modernization Platform</div>
-<h1>ASIMOV</h1><p class="promise">ASIMOV extracts a governed model of your legacy system and drives the migration against it, so modernization stays auditable instead of drifting. Agents execute; your experts validate.</p>
-<div class="meta"><span class="chip">15M+ lines of legacy code modernized</span><span class="chip">10+ programs delivered at scale</span><span class="chip">3+ years of field-tested evolution</span></div></div></div>
-
-<section class="blk" style="--cc:var(--blue)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">The problem</div><h2>Modernization stalls on systems nobody fully understands</h2>
-<p>Generic AI coding assistants and code-translation tools hit predictable walls on enterprise legacy estates. The failures group into three categories.</p></div>
-<div class="why">
-<div class="w" style="--cc:var(--blue)"><h3>Code and structure</h3><p>Spaghetti logic with no clear structure, and an architecture misaligned with your target stack, patterns and reuse posture. Line-by-line translation carries both problems forward.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>Knowledge and context</h3><p>Large source applications overwhelm AI context. Documentation and resident knowledge are gone, and without requirement documents, test automation is blocked before it starts.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>Integration and execution</h3><p>Brownfield migration into an existing target application is handled poorly, external dependencies create parity and runtime risk, and unconstrained agents hallucinate.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>The ASIMOV answer</h3><p>Replace free-text reasoning with structure: a Source Graph of the legacy system, a Target Blueprint for the modern one, and a human-readable specification layer between them. Structure constrains generation at every step, which is what makes ASIMOV more than a pattern-matched code transpiler.</p></div>
-</div></div></section>
-
-<section class="blk" style="--cc:var(--blue);background:var(--bg2)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">What ASIMOV recovers</div><h2>A governed model of the system, extracted from the code itself</h2>
-<p>AGIE, the graph ingestion and enrichment pillar, decomposes the legacy codebase into a knowledge graph: directories, files, classes, methods and the relationships among them, enriched with dependencies, descriptions and metrics. The Source Graph captures how the system behaves, not what the surviving documentation claims.</p></div>
-<p style="max-width:760px">From that graph ASIMOV extracts the ASF, a specification-as-code intermediate that both machines and people can read. It renders as a Business Requirements Document, as Gherkin and Playwright function tests, and as a chatbot interface to the code. Your architects and product owners then annotate it module by module, retain, modify, replace or retire, and that annotation sets the migration scope. The lost institutional knowledge comes back as a reviewable artifact before any migration begins.</p>
-<h3 style="margin:36px 0 18px">Discovery output for a representative Struts estate</h3>
-<div class="impact">
-<div class="m"><div class="n">16,944</div><div class="l">total files ingested into the graph</div></div>
-<div class="m"><div class="n">3,217,606</div><div class="l">lines of code decomposed and enriched</div></div>
-<div class="m"><div class="n">2,573</div><div class="l">Struts action mappings traced</div></div>
-<div class="m"><div class="n">1,387</div><div class="l">files ranked high priority for migration</div></div>
-</div>
-<p style="margin-top:20px;font-size:14px;color:var(--muted)">This estate scored 100 out of 100 on migration complexity. Discovery produced this dashboard, with traceability from every high-priority file to every dependency the migration touches, before any migration commitment.</p>
-</div></section>
-
-<section class="blk" style="--cc:var(--blue)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">How it works</div><h2>Five pillars run the lifecycle; two human checkpoints govern it</h2>
-<p>The pipeline covers the modernization lifecycle from legacy understanding to ongoing operation. Each pillar is a distinct concern, operated by a named set of agents.</p></div>
-<div class="tbro p5">
-<div class="ph" style="background:var(--purple)"><div class="n">AGIE</div><div class="f">Discover</div><div class="li">Decomposes legacy code into a Code Graph · Enriches it with dependencies and metrics · Decomposes the Target Blueprint into a Target Graph</div></div>
-<div class="ph" style="background:var(--blue)"><div class="n">ASF</div><div class="f">Document</div><div class="li">Specification-as-code · BRD, Gherkin and Playwright tests, code chatbot · SMEs annotate scope: retain, modify, replace, retire</div></div>
-<div class="ph" style="background:var(--green)"><div class="n">AMM</div><div class="f">Migrate</div><div class="li">Agentic migration of source code into the target stack · Driven by the annotated ASF and the selected module</div></div>
-<div class="ph" style="background:var(--orange)"><div class="n">AVF</div><div class="f">Validate</div><div class="li">Four quality gates with machine-verifiable evidence · Findings feed back into AMM until the gates pass</div></div>
-<div class="ph" style="background:var(--gray)"><div class="n">Maintain</div><div class="f">Maintain</div><div class="li">Modernized code maintained after deployment · Knowledge graph handed over at an agreed pace · Connects to Breeze.AI</div></div>
-</div>
-<p style="max-width:760px;margin-top:26px">Two human checkpoints are named in the pipeline: SME annotation of the ASF up front, and Expert Review of the migrated output at the end. Everything between them is agentic. That split works because modernization has a finite, measurable success criterion, behavioral parity with the legacy system on the target stack, so the agents run autonomously and your people validate the outcome instead of approving every step.</p>
-</div></section>
-
-<section class="blk" style="--cc:var(--blue);background:var(--bg2)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">Validation</div><h2>Quality is validated continuously, not approved at the end</h2>
-<p>AVF runs four named gates, each operated by its own validation agent, each producing machine-verifiable evidence. A candidate that fails any gate returns to AMM with the evidence attached; only code that passes all four advances to Expert Review.</p></div>
-<div class="why">
-<div class="w" style="--cc:var(--blue)"><h3>Architecture Gate</h3><p>Infers the source architecture from the Source Graph, enforces alignment with the Target Blueprint, and flags structural drift.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>Design Gate</h3><p>Applies approved design systems and UI guidelines, so generated interfaces conform to your design standards.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>Standards Gate</h3><p>Applies enterprise security rules and coding standards, and detects any deviation of output from defined policy.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>Functional Gate</h3><p>Validates business-logic equivalence between legacy behavior and migrated output, and detects deviation of business rules.</p></div>
-</div>
-<p style="max-width:760px;margin-top:26px">In parallel, three validation streams run against the migrated application: an agentic feature audit that inspects running interfaces with AI vision models to confirm feature parity, AI-generated unit tests with a typical engagement target of 80 percent coverage or higher, and end-to-end behavior-driven testing of complete business workflows against the Functional Ontology captured in the Source Graph.</p>
-</div></section>
-
-<section class="blk" style="--cc:var(--blue)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">What it covers</div><h2>Three shapes of legacy work, one platform</h2>
-<p>All three capabilities run the same five-pillar architecture and the same agentic execution model. What changes is the Target Blueprint and the per-language adapters in the migration agents.</p></div>
-<div class="svc">
-<div class="s" style="--cc:var(--blue)"><div class="top"><h3>Legacy System Renewal</h3></div><p>End-to-end transformation of legacy codebases into modern, reliable stacks. Breaks the dependence on obsolete platforms, reduces technical debt, and positions the application for what comes next.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">COBOL to .NET 8 · Delphi to C#/.NET 8 · VB.NET to .NET Core</div></div>
-<div class="s" style="--cc:var(--blue)"><div class="top"><h3>Scalable Architecture Redesign</h3></div><p>A structured path from monolith to modular. Intelligent analysis and guided transformation move the application to microservices or from tightly coupled to modular design.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Monolithic ASP.Net 4.5 to .NET 10 microservices with a React 19 UI</div></div>
-<div class="s" style="--cc:var(--blue)"><div class="top"><h3>AI-Guided Upgrades</h3></div><p>Rapid version upgrades within a technology family: automated code scanning, dependency mapping and compatibility recommendations that keep systems secure, compliant and performing.</p><div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Java 8 to Java 21 · Java Struts to Spring MVC · .NET 4.5 to .NET 8</div></div>
-</div></div></section>
-
-<section class="blk" style="--cc:var(--blue);background:var(--bg2)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">Entry sizes</div><h2>Start as small as documentation, scale to full modernization</h2>
-<p>The intelligence core ASIMOV builds, the Source Graph, the enriched graph, the ASF and the Target Graph, serves more than one purpose. Each engagement mode consumes a different slice of it, so you enter at the point that matches your situation.</p></div>
-<div class="svc">
-<div class="s" style="--cc:var(--blue)"><div class="top"><h3>Documentation Only</h3><span class="tag" style="color:var(--blue)">No migration</span></div><p>Functional and technical documentation, test scenarios and traceability artifacts generated from the legacy code base. Fits when the system will keep running and the priority is closing the documentation gap before the SMEs who hold it leave.</p></div>
-<div class="s" style="--cc:var(--blue)"><div class="top"><h3>Discovery + Documentation</h3><span class="tag" style="color:var(--blue)">Baseline</span></div><p>Application inventory, dependency maps, business rules, process flows and SME review packs, on top of the documentation outputs. Fits when you need a defensible baseline of system understanding before committing to a modernization path.</p></div>
-<div class="s" style="--cc:var(--blue)"><div class="top"><h3>Migration Readiness</h3><span class="tag" style="color:var(--blue)">Pre-migration</span></div><p>Migration scope, as-is versus delta classification, target mapping inputs, sequencing, a risk and complexity view, and a requirements traceability matrix. Fits when modernization is planned and the team wants a rigorous foundation before transformation begins.</p></div>
-<div class="s" style="--cc:var(--blue)"><div class="top"><h3>Full Modernization</h3><span class="tag" style="color:var(--blue)">End to end</span></div><p>The whole pipeline, AGIE through Maintain: target code generation, API and interface specs, architecture alignment, custom code for approved deltas, developer-ready work packages. Indicative cadence: discovery in two to four weeks, graph generation in one to three, the first MVP module in six to twelve, then scaled migration in quarters per module group.</p></div>
-<div class="s" style="--cc:var(--blue)"><div class="top"><h3>Maintain, Operate and Convergence</h3><span class="tag" style="color:var(--blue)">Post-migration</span></div><p>An operational knowledge base, lifecycle documentation, change-impact support, overlap analysis across products and a convergence blueprint. Fits when modernization is complete or partial and you want the knowledge graph kept in operation.</p></div>
-</div>
-<p style="max-width:760px;margin-top:26px">Clients commonly move from one mode to the next as confidence builds; the modes are entry points sized to your situation, not a forced ladder. Durations depend on estate size, target stack and your path-to-production process. Cost outcomes are framed engagement by engagement; ASIMOV reports duration and effort outcomes.</p>
-</div></section>
-
-<section class="blk" style="--cc:var(--blue)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">Proof</div><h2>The track record</h2></div>
-<div class="proof">
-<div class="p" style="--cc:var(--blue)"><div class="n">15M+</div><div class="l">lines of legacy code modernized</div><div class="d">Across ASP.Net, COBOL, Delphi, ASP Forms, VB.NET and custom proprietary systems.</div></div>
-<div class="p" style="--cc:var(--blue)"><div class="n">10+</div><div class="l">modernization programs at scale</div><div class="d">Delivered across large enterprises and regulated environments in insurance and finance, healthcare and life sciences, and inventory and logistics.</div></div>
-<div class="p" style="--cc:var(--blue)"><div class="n">3+ yrs</div><div class="l">of field-tested evolution</div><div class="d">Time-boxed delivery cycles for complex enterprise systems, refined program over program.</div></div>
-</div>
-<p style="max-width:760px;margin-top:26px">Seven anonymized case studies cover the breadth of stacks ASIMOV has modernized, including Java and Delphi programs, across insurance, healthcare, logistics, education technology, financial services, and fuel and billing. The list is representative, not exhaustive; the per-language adapters extend to stacks beyond those covered. <a href="case-studies.html#products" style="color:var(--blue);font-weight:700">Read the modernization case studies →</a></p>
-<h3 style="margin:36px 0 12px">What every full modernization hands over</h3>
-<ul style="max-width:760px;margin-left:22px;color:var(--ink2)">
-<li style="margin:6px 0">Source code, test cases and documentation, complete enough for your internal teams to manage, audit and scale the system without us.</li>
-<li style="margin:6px 0">Zero cloud dependency on the migrated code: no vendor lock-in, and full control over infrastructure and deployment cost after the migration.</li>
-<li style="margin:6px 0">Optimized, maintainable code that reduces long-term technical debt and extends the lifespan of the system.</li>
-<li style="margin:6px 0">Knowledge of the modernized system, queryable through interfaces like the code chatbot, so issue fixes and new features land faster as the business evolves.</li>
-</ul>
-</div></section>
-
-<section class="blk" style="--cc:var(--blue);background:var(--bg2)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">Where it fits</div><h2>ASIMOV for the bounded migration, Breeze.AI for what comes after</h2></div>
-<p style="max-width:760px">ASIMOV and Breeze.AI are peer platforms under our Software Engineering and Modernization capability, and both apply Semantic Engineering. Choose ASIMOV when the target is well-defined: the legacy system's behavior is the parity contract, the target stack is fixed up front, and the scope can be bounded, a finite project measured in quarters. Choose <a href="breeze-ai.html" style="color:var(--blue);font-weight:700">Breeze.AI</a> when the scope is a moving target: the product is in live development, greenfield or brownfield, and requirements emerge as the team works.</p>
-<p style="max-width:760px;margin-top:14px">Many enterprise clients use both in sequence. ASIMOV runs the bounded modernization; once the modernized system is live, Breeze.AI takes over its continuous evolution, seeded with the Source Graph and Functional Ontology that ASIMOV captured from the legacy system. The graph travels; the engagement models do not overlap. ASIMOV also anchors the AI-Led Legacy Modernization offering in our <a href="smarter-products.html" style="color:var(--blue);font-weight:700">Smarter Products</a> pillar.</p>
-<div style="border:1px solid var(--line);border-radius:14px;padding:24px 28px;max-width:760px;margin-top:30px;background:#fff">
-<div style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Go deeper</div>
-<p style="font-size:14px;margin:6px 0"><a href="insight-modernization-operating-model.html" style="color:var(--blue);font-weight:700">Insight: the modernization operating model →</a></p>
-<p style="font-size:14px;margin:6px 0"><a href="insights.html" style="color:var(--blue);font-weight:700">More perspectives on our Insights page →</a></p>
-<p style="font-size:14px;margin:6px 0">The full practitioner reference, with the pillar architecture and engagement model in detail, lives at <a href="https://semantic-engineering.ai/practitioner/asimov/" style="color:var(--blue);font-weight:700">semantic-engineering.ai/practitioner/asimov →</a></p>
-</div>
-</div></section>
-
-<section class="blk" style="padding-top:0;background:var(--bg2)"><div class="wrap"><div class="ctaband" style="background:linear-gradient(100deg,var(--blue),#14152A)">
-<div><h2>Modernizing a system nobody fully understands?</h2><p style="color:#dfe6ff;margin-top:10px;max-width:560px">Start with a documentation-only pass: functional and technical documentation, test scenarios and traceability from the code base, with no migration commitment.</p></div>
-<a class="btn btn-primary" href="contact.html" style="background:#fff;color:var(--blue);box-shadow:none">Talk to us</a>
-</div></div></section>
-
-<footer class="site"><div class="wrap"><div class="fgrid">
+</header><div class="lhero" style="background:radial-gradient(1100px 520px at 88% -25%,rgba(26,79,201,0.14) 0%,transparent 62%),linear-gradient(160deg,rgba(26,79,201,0.12) 0%,rgba(26,79,201,0.04) 34%,#ffffff 66%)"><div class="wrap">
+<div class="crumb"><a href="index.html">Home</a> / <a href="our-core.html">Our Core</a> / ASIMOV</div>
+<span class="accent" style="background:var(--blue)"></span>
+<div class="eyebrow">Our Core</div>
+<h1>ASIMOV</h1><p class="tagline">Legacy modernization platform.</p></div></div><section class="blk" style="--cc:var(--blue);padding-bottom:34px"><div class="wrap"><div class="sec-head">
+<div class="eyebrow" style="--ac:var(--blue)">Overview</div><h2>ASIMOV</h2><p>ASIMOV is our legacy modernization platform. It extracts a governed model of a legacy system and drives modernization against it, so the work stays auditable rather than drifting.</p></div></section><section class="blk" style="--cc:var(--blue);padding-top:0"><div class="wrap"><div class="why">
+<div class="w" style="--cc:var(--blue)"><h3>What is it</h3><p>ASIMOV is our legacy modernization platform. It extracts a governed model of a legacy system and drives modernization against it, so the work stays auditable rather than drifting.</p></div>
+<div class="w" style="--cc:var(--blue)"><h3>How it works</h3><p>ASIMOV reads a legacy system and extracts a governed model of what it does: data structures, business rules and dependencies. Modernization is then driven against that model, with every step traceable back to the original behavior, so nothing silently drifts and the migration stays auditable end to end.</p></div></div></div></section><section class="blk coreblk" style="--cc:var(--blue);background:var(--bg2);color:var(--ink)"><div class="wrap">
+<div class="sec-head"><div class="eyebrow" style="--ac:var(--blue)">Business Impact</div><h2 style="color:var(--ink)">Evidence, not adjectives</h2></div>
+<div class="proof"><div class="p" style="--cc:var(--blue)"><div class="d"><strong>6M+ lines of legacy code migrated</strong></div></div><div class="p" style="--cc:var(--blue)"><div class="d"><strong>85% cost reduction versus manual rewrite</strong></div></div><div class="p" style="--cc:var(--blue)"><div class="d"><strong>10x faster deployment</strong></div></div></div></div></section><section class="blk" style="--cc:var(--blue)"><div class="wrap"><div class="sec-head"><div class="eyebrow" style="--ac:var(--blue)">Relevant Links</div></div>
+<div class="links-row"><a class="lchip" href="smarter-products.html" style="--cc:var(--blue)">Smarter Products</a><a class="lchip" href="breeze-ai.html" style="--cc:var(--blue)">Breeze.AI, for greenfield and brownfield</a></div></div></section><section class="blk" style="--cc:var(--blue);padding-top:0"><div class="wrap"><div class="sec-head"><div class="eyebrow" style="--ac:var(--blue)">Insights</div>
+<h2>Go deeper</h2><p>Blogs, white papers and briefings on ASIMOV.</p></div><div class="ins"><a href="insights.html" style="--cc:var(--blue)"><span class="k">Insight</span>Case study: 2.5M lines of COBOL to .NET</a><a href="insights.html" style="--cc:var(--blue)"><span class="k">Insight</span>White paper: auditable legacy modernization</a></div>
+<p style="margin-top:16px"><a href="insights.html" style="color:var(--blue);font-weight:700">See all insights &rarr;</a></p></div></section><section class="ctaband" style="background:radial-gradient(1100px 520px at 88% -25%,rgba(26,79,201,0.14) 0%,transparent 62%),linear-gradient(160deg,rgba(26,79,201,0.12) 0%,rgba(26,79,201,0.04) 34%,#ffffff 66%)"><div class="wrap ctain"><div><h2>Modernize the legacy you cannot touch</h2><p>See how ASIMOV extracts a governed model and drives auditable modernization.</p></div><a class="btn btn-cta" style="background:var(--blue)" href="contact.html">Request an ASIMOV assessment</a></div></section><footer class="site"><div class="wrap"><div class="fgrid">
 <div><div class="brand" style="color:var(--ink)"><span class="mk"></span>Accion<span>labs</span></div>
 <p style="font-size:14px;color:var(--muted);margin-top:12px;max-width:280px">An AI-Led Innovation Engineering company, powered by Semantic Engineering.</p></div>
 <div class="fcol"><h4>What We Do</h4><a href="smarter-people.html">Smarter People</a><a href="smarter-products.html">Smarter Products</a><a href="smarter-processes.html">Smarter Processes</a><a href="data.html">Smarter Data</a><a href="platforms.html">Smarter Platform</a><a href="governance-assurance.html">Smarter Assurance</a></div>

@@ -1,9 +1,9 @@
 <!DOCTYPE html><!-- DESIGN MOCKUP. Copy from approved v7.2. Segoe UI. -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Technology Partners | Accion Labs</title><meta name="description" content="Verified partnerships with Microsoft, AWS, Google Cloud, Databricks, Snowflake, Salesforce, and ServiceNow, with the certifications behind our platform work."><style>
+<title>Partners | Accion Labs</title><meta name="description" content="Microsoft, AWS, Salesforce, ServiceNow, Databricks, Snowflake and more."><style>
 :root{
  --purple:#7B36AF;--blue:#1A4FC9;--green:#146800;--orange:#DF7028;--red:#B73734;--gray:#69737D;
- --ink:#14152A;--ink2:#3a3b52;--muted:#6b7078;--line:#e7e7ef;--bg:#fff;--bg2:#f7f7fb;
+ --dark:#1A1A2E;--ink:#14152A;--ink2:#3a3b52;--muted:#6b7078;--line:#e7e7ef;--bg:#fff;--bg2:#f7f7fb;
  --font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;--maxw:1180px;--r:16px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -32,7 +32,11 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);ba
 .car{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px}
 .mega{position:absolute;top:64px;left:0;width:720px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px rgba(20,21,42,.14);padding:22px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.18s;display:grid;grid-template-columns:1fr 1fr;gap:8px 26px}
 .mega.r{left:auto;right:0;width:420px;grid-template-columns:1fr}.mega.rw{left:auto;right:0;width:640px;grid-template-columns:1fr 1fr}
-.menu>li.open .mega{opacity:1;visibility:visible;transform:none}
+.menu>li.open .mega,.menu>li:hover .mega{opacity:1;visibility:visible;transform:none}
+.mega.core2{width:660px;left:auto;right:0;grid-template-columns:1.25fr 1fr;align-items:start}
+.mega.core2.single{left:0;right:auto;width:360px;grid-template-columns:1fr}
+.mcx{display:flex;flex-direction:column;gap:2px}
+.mcx .ch{margin:0 0 2px}
 .mega .ch{grid-column:1/-1;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 0 2px}
 .mega .gh{grid-column:span 1;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:2px}
 .mega a.it{display:block;padding:9px 11px;border-radius:10px;border-left:3px solid transparent}
@@ -46,6 +50,7 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.9);ba
 .mnav.show{display:block}.mnav a{display:block;padding:11px 4px;font-weight:600;border-bottom:1px solid var(--line);color:var(--ink2)}
 section.blk{padding:76px 0}
 .sec-head{max-width:720px;margin-bottom:40px}.sec-head h2{margin:10px 0}.sec-head p{font-size:17px}
+.we-lede{font-size:clamp(19px,2.3vw,26px);font-weight:600;line-height:1.4;color:var(--ink);max-width:900px}.we-lede a{color:var(--purple);border-bottom:2px solid var(--purple);font-weight:700}
 .hero{position:relative;overflow:hidden;padding:82px 0 66px;background:linear-gradient(180deg,#fff,var(--bg2))}
 .hero .gfx{position:absolute;right:-30px;top:20px;width:52%;max-width:600px;opacity:.9;z-index:0}
 .hero .wrap{position:relative;z-index:1;max-width:820px}
@@ -62,20 +67,20 @@ section.blk{padding:76px 0}
 .card .bd li{font-size:13.5px;color:var(--ink2);padding-left:15px;position:relative}
 .card .bd li:before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:2px;background:var(--cc)}
 .card .go{margin-top:14px;font-size:13px;font-weight:700;color:var(--cc);display:inline-flex;gap:6px}
-.coreblk{background:var(--ink);color:#fff}
-.coreblk .eyebrow{color:#c9a9e8}.coreblk h2{color:#fff}.coreblk .sec-head p{color:#c7c9de}
+.coreblk{background:var(--bg2);color:var(--ink)}
+.coreblk .eyebrow{color:var(--ac,var(--purple))}.coreblk h2{color:var(--ink)}.coreblk .sec-head p{color:var(--ink2)}
 .eng{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
 .eng .e{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px}
 .eng .e .n{font-size:20px;font-weight:800}.eng .e p{color:#c7c9de;font-size:13px;margin-top:8px}
 .tbro{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:14px;overflow:hidden;margin-top:8px}
-.tbro .ph{padding:20px 18px;color:#fff}
-.tbro .ph .n{font-size:17px;font-weight:800}.tbro .ph .f{font-size:12px;opacity:.9;margin:2px 0 10px}
-.tbro .ph .li{font-size:11px;opacity:.92;line-height:1.7}
+.tbro .ph{padding:22px 18px;color:#fff;text-decoration:none;display:block;transition:filter .15s}
+.tbro a.ph:hover{filter:brightness(1.08)}
+.tbro .ph .n{font-size:17px;font-weight:800}.tbro .ph .f{font-size:12px;opacity:.9;margin:2px 0 12px}
+.tbro .ph .go2{font-size:12px;font-weight:700;opacity:.95}
 .impact{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .impact .m .n{font-size:34px;font-weight:800;background:linear-gradient(100deg,var(--purple),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
 .impact .m .l{font-size:13px;color:var(--muted)}
-.ctaband{background:linear-gradient(100deg,var(--purple),var(--blue));border-radius:24px;padding:48px 44px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.ctaband h2{color:#fff;max-width:600px}.ctaband .btn{background:#fff;color:var(--purple)}
+.ctaband-old{display:none}
 footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 0 28px}
 .fgrid{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:28px}
 .fcol h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
@@ -83,11 +88,21 @@ footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 
 .fbot{display:flex;justify-content:space-between;margin-top:34px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;gap:8px}
 .fbot small{color:var(--muted);font-size:12.5px}.draft{font-size:11px;color:#b58900;background:#fff8e1;border:1px solid #f2e2a8;padding:3px 9px;border-radius:999px}
 /* landing */
-.lhero{color:#fff;position:relative;overflow:hidden;padding:78px 0 68px}
-.lhero .crumb{font-size:12px;opacity:.85;margin-bottom:14px}
-.lhero h1{margin-bottom:14px}.lhero .promise{font-size:20px;max-width:600px;opacity:.97;color:#fff}
+.lhero{color:var(--ink);position:relative;overflow:hidden;padding:74px 0 60px;border-bottom:1px solid var(--line)}
+.lhero .crumb{font-size:12px;color:var(--muted);margin-bottom:14px}.lhero .crumb a{color:var(--muted)}
+.lhero .eyebrow{color:var(--ac,var(--purple)) !important}
+.lhero h1{margin-bottom:6px;color:var(--ink)}.lhero .tagline{font-size:clamp(20px,2.6vw,30px);font-weight:800;letter-spacing:-.01em;margin:0 0 12px;color:var(--ink)}
+.lhero .promise{font-size:18px;max-width:640px;color:var(--ink2)}
+.lhero .accent{display:inline-block;width:52px;height:4px;border-radius:3px;margin-bottom:18px}
 .lhero .meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
-.lhero .chip{font-size:12px;padding:7px 13px;border-radius:22px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);font-weight:600}
+.lhero .chip{border:1px solid var(--line);color:var(--ink2);background:#fff}
+.ctaband{padding:52px 0;color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ctaband .ctain{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ctaband h2{color:var(--ink);font-size:clamp(22px,2.6vw,30px);margin:0}
+.ctaband p{color:var(--ink2);margin:8px 0 0;max-width:660px;font-size:16px}
+.btn-cta{color:#fff;font-weight:800;padding:15px 28px;border-radius:10px;white-space:nowrap}
+.btn-cta:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(20,21,42,.18)}
+.lhero .chip{font-size:12px;padding:7px 13px;border-radius:22px;background:#fff;border:1px solid var(--line);color:var(--ink2);font-weight:600}
 .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .svc .s{border:1px solid var(--line);border-radius:14px;padding:20px 22px;border-left:4px solid var(--cc);background:#fff}
 .svc .s .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
@@ -100,17 +115,26 @@ footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 
 .proof .p{border:1px solid var(--line);border-radius:14px;padding:20px;border-top:4px solid var(--cc)}
 .proof .p .n{font-size:26px;font-weight:800;color:var(--cc)}.proof .p .l{font-size:12px;color:var(--muted)}
 .proof .p .d{font-size:13px;margin-top:8px;color:var(--ink2)}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pegrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.pecard{border:1px solid var(--line);border-top:4px solid var(--cc,var(--purple));border-radius:12px;padding:16px 16px 8px;background:#fff}
+.pecard h3{font-size:14px;margin-bottom:8px;color:var(--ink)}
+.pecard ul{list-style:none;padding:0;margin:0}
+.pecard li{font-size:13px;color:var(--ink2);padding:5px 0 5px 14px;position:relative}
+.pecard li:before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:1px;background:var(--cc,var(--purple))}
+.links-row{display:flex;gap:12px;flex-wrap:wrap}
+.lchip{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--cc,var(--purple));color:var(--cc,var(--purple));font-weight:700;font-size:14px;padding:11px 18px;border-radius:999px}
+.lchip:hover{background:var(--cc,var(--purple));color:#fff}
+.ins{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.ins a{display:block;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-weight:600;color:var(--ink)}
+.ins a:hover{border-color:var(--cc,var(--purple));color:var(--cc,var(--purple))}
+.ins a .k{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
 .reveal{opacity:0;transform:translateY(16px);transition:.6s}.reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 @media(max-width:900px){.menu,.navr .btn-ghost{display:none}.ham{display:flex}
- .grid3,.eng,.impact,.svc,.why,.proof{grid-template-columns:1fr}.tbro{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}
-/* page */
-.pchips{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 30px}
-.pchip{display:inline-flex;align-items:baseline;gap:8px;font-size:14px;padding:9px 17px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:700;color:var(--ink)}
-.pchip small{font-weight:600;color:var(--muted);font-size:11.5px}
-.plink{color:var(--blue);font-weight:700}
+ .grid3,.eng,.impact,.svc,.why,.proof,.cgrid,.ins,.pegrid{grid-template-columns:1fr}.tbro{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}}
 </style></head>
-<body><div style="--ac:var(--orange)"></div><header class="site"><div class="wrap nav"><a class="brand" href="index.html"><span class="mk"></span>Accion<span>labs</span></a>
+<body><header class="site"><div class="wrap nav"><a class="brand" href="index.html"><span class="mk"></span>Accion<span>labs</span></a>
 <ul class="menu">
  <li id="m1"><a onclick="tg(1)">What We Do <i class="car"></i></a>
   <div class="mega"><div class="ch">Six Ways In, Each One a Standalone Engagement</div><a class="it" href="smarter-people.html" style="border-left-color:var(--orange)"><div class="t">Smarter People</div><div class="s">AI Copilots &amp; Knowledge Assistants  ·  Agentic Workflow Automation  ·  Workforce Enablement &amp; Change Adoption…</div></a><a class="it" href="smarter-products.html" style="border-left-color:var(--purple)"><div class="t">Smarter Products</div><div class="s">AI-Led Legacy Modernization  ·  AI-Enabled Tech Debt Reduction  ·  Agenticification of Product…</div></a><a class="it" href="smarter-processes.html" style="border-left-color:var(--blue)"><div class="t">Smarter Processes</div><div class="s">Intelligent Document Processing  ·  Process Mining &amp; Optimization  ·  Business Process Transformation…</div></a><a class="it" href="data.html" style="border-left-color:var(--red)"><div class="t">Smarter Data</div><div class="s">AI-Readiness of Enterprise Data  ·  ML Model Creation &amp; Applications  ·  Data Platform Modernization…</div></a><a class="it" href="platforms.html" style="border-left-color:var(--green)"><div class="t">Smarter Platform</div><div class="s">TokenOps  ·  Cloud Migration &amp; Transformation  ·  Multi-cloud Strategy &amp; Management…</div></a><a class="it" href="governance-assurance.html" style="border-left-color:var(--gray)"><div class="t">Smarter Assurance</div><div class="s">AI Governance &amp; Responsible AI  ·  Model Risk, Evaluation &amp; Assurance  ·  Policy, Provenance &amp; Audit…</div></a></div></li>
@@ -124,59 +148,9 @@ footer.site{background:var(--bg2);border-top:1px solid var(--line);padding:52px 
 <button class="ham" onclick="document.getElementById('mn').classList.toggle('show')"><span></span><span></span><span></span></button></div>
 </div>
 <div class="wrap mnav" id="mn"><a href="smarter-people.html">Smarter People</a><a href="smarter-products.html">Smarter Products</a><a href="smarter-processes.html">Smarter Processes</a><a href="data.html">Smarter Data</a><a href="platforms.html">Smarter Platform</a><a href="governance-assurance.html">Smarter Assurance</a><a href="our-core.html">Our Core</a><a href="semantic-engineering.html">Semantic Engineering</a><a href="case-studies.html">Case Studies</a><a href="industries.html">Industries</a><a href="about.html">Company</a><a href="insights.html">Insights</a><a href="contact.html">Book a Consultation</a></div>
-</header><div class="lhero" style="background:radial-gradient(900px 460px at 85% -10%,rgba(255,255,255,.16),transparent 60%),linear-gradient(135deg,var(--blue) 0%,#14152A 130%)">
-<div class="wrap"><div class="crumb"><a href="index.html">Home</a> · Company · Technology Partners</div>
-<div class="eyebrow" style="color:rgba(255,255,255,.85)">The platforms we build on</div>
-<h1>Technology Partners</h1><p class="promise">Verified partner status with the cloud, data, and enterprise platforms your business already runs. Each relationship is backed by active certifications, dedicated practice teams, and a delivery track record.</p>
-<div class="meta"><span class="chip">Microsoft</span><span class="chip">AWS</span><span class="chip">Google Cloud</span><span class="chip">Databricks</span><span class="chip">Snowflake</span><span class="chip">Salesforce</span><span class="chip">ServiceNow</span></div></div></div>
-
-<section class="blk" style="--cc:var(--blue)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">How we work with partners</div>
-<h2>One team from architecture to operations</h2>
-<p class="sub">We treat each partnership as a long-term collaboration where expertise, tools, and knowledge flow in both directions. Each partner platform's strength, combined with our engineering depth, takes enterprises from pilots to steady-state operations. The team that designs your architecture also builds it and runs it across the full stack. Three principles govern the work.</p></div>
-<div class="why">
-<div class="w" style="--cc:var(--blue)"><h3>Collaboration over transaction</h3><p>Partners and Accion Labs plan, build, and operate together, with clear roles, responsibilities, and change governance.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>Engineering for operations</h3><p>We test designs in representative environments, document runbooks, and agree support models up front, so client teams can run day-to-day systems themselves.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>Result focus</h3><p>Engagements target shorter stabilization windows, lower operational risk, and clear ownership of interfaces and data.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>Accelerators on every platform</h3><p>Our practice teams hold platform-specific credentials and build proprietary accelerators on each platform to cut implementation time and delivery risk. <a class="plink" href="breeze-ai.html">Breeze.AI</a>, our AI-first delivery platform, operates across the partner stack at every stage of delivery.</p></div>
-</div></div></section>
-
-<section class="blk" style="--cc:var(--blue);background:var(--bg2)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">Cloud platforms</div>
-<h2>Advanced partner status with all three hyperscalers</h2>
-<p class="sub">Our cloud engineering practice covers infrastructure architecture, cloud-native development, migration, and FinOps on Microsoft Azure, AWS, and Google Cloud. This is the partner bench behind our <a class="plink" href="platforms.html">Smarter Platform</a> engagements, from TokenOps to multi-cloud management.</p></div>
-<div class="pchips"><span class="pchip">Microsoft <small>· Solutions Partner</small></span><span class="pchip">AWS <small>· Advanced Tier Services Partner</small></span><span class="pchip">Google Cloud <small>· Partner</small></span></div>
-<div class="why">
-<div class="w" style="--cc:var(--blue)"><h3>Microsoft</h3><p>Five Solution Partner designations, spanning Data and AI, Digital and App Innovation, Infrastructure, Security, and Business Applications, plus eight advanced Azure specializations. Microsoft named Accion Labs its 2023 Partner of the Year for Analytics, and we are a multi-year Microsoft Fabric Feature Partner. Delivery covers Azure infrastructure and cloud modernization, Fabric and the Azure data stack, Azure OpenAI and Azure AI Foundry, Microsoft 365 Copilot and Copilot Studio, Dynamics 365 and Power Platform, and Microsoft Zero Trust security.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>AWS</h3><p>As an Advanced Tier Services Partner, Accion Labs delivers cloud architecture and migration, data engineering on Amazon Redshift and SageMaker, AI workloads on Amazon Bedrock, and DevOps, SRE, and FinOps. The MAGIC framework, covering Modernize, Accelerate, Govern, Innovate, and Cloud/AI, structures each transformation.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>Google Cloud</h3><p>GCP infrastructure, AI and ML workloads on Vertex AI, and BigQuery data engineering.</p></div>
-</div></div></section>
-
-<section class="blk" style="--cc:var(--blue)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">Data and AI</div>
-<h2>Certified practices on Databricks and Snowflake</h2>
-<p class="sub">Both practices cover platform architecture, data engineering, governance, and migration off legacy environments where cost and performance have become constraints.</p></div>
-<div class="pchips"><span class="pchip">Databricks <small>· Solution Partner</small></span><span class="pchip">Snowflake <small>· Select Services Partner</small></span></div>
-<div class="why">
-<div class="w" style="--cc:var(--blue)"><h3>Databricks</h3><p>Lakehouse architecture and Delta Lake implementation, data pipeline engineering, ML and AI platform build-out, Unity Catalog governance, and migration off legacy data warehouses and Hadoop environments.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>Snowflake</h3><p>Data warehouse architecture, Snowflake data engineering, Cortex AI analytics, and secure cross-cloud migration from legacy environments.</p></div>
-</div></div></section>
-
-<section class="blk" style="--cc:var(--blue);background:var(--bg2)"><div class="wrap"><div class="sec-head">
-<div class="eyebrow" style="--ac:var(--blue)">Enterprise platforms</div>
-<h2>Dedicated practices for Salesforce and ServiceNow</h2>
-<p class="sub">Accion Labs operates standing practices for both platforms, and each delivers the platform's AI layer, Agentforce and Now Assist, in production.</p></div>
-<div class="pchips"><span class="pchip">Salesforce <small>· Ridge Consulting Partner</small></span><span class="pchip">ServiceNow <small>· Elite Partner, through Serviceberry</small></span></div>
-<div class="why">
-<div class="w" style="--cc:var(--blue)"><h3>Salesforce</h3><p>As a Ridge Consulting Partner, our Center of Excellence delivers across Sales, Service, Commerce, Marketing, Experience, and Revenue Cloud, with Agentforce deployment, Data Cloud activation, and managed services through AmplifAI.</p></div>
-<div class="w" style="--cc:var(--blue)"><h3>ServiceNow</h3><p>Serviceberry, an Accion Labs company, holds ServiceNow Elite Partner status. The practice covers ITSM, CSM, FSM, HRSD, ITOM, and SecOps, and delivers Now Assist and AI-driven operations through the A3G framework, which moves teams from Assist to Automate, Agentic, and Governed.</p></div>
-</div></div></section>
-
-<section class="blk" style="padding:56px 0"><div class="wrap"><div class="ctaband" style="background:linear-gradient(100deg,var(--blue),#14152A)">
-<div><h2>Building on a platform we partner with?</h2><p style="color:#dfe4f5;margin-top:10px;max-width:560px">We will map your stack to the right delivery model, with the certifications, accelerators, and support model to match.</p></div>
-<a class="btn btn-primary" href="contact.html" style="color:var(--blue)">Talk to us</a></div></div></section>
-
-<footer class="site"><div class="wrap"><div class="fgrid">
+</header><div class="lhero" style="background:radial-gradient(1100px 520px at 88% -25%,rgba(20,104,0,0.14) 0%,transparent 62%),linear-gradient(160deg,rgba(20,104,0,0.12) 0%,rgba(20,104,0,0.04) 34%,#ffffff 66%)"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> / Partners</div><span class="accent" style="background:var(--green)"></span><div class="eyebrow">Partners</div><h1>Technology Partners</h1><p class="promise">We engineer on the platforms our clients already trust, with deep partner-certified expertise.</p></div></div><section class="blk"><div class="wrap"><div class="sec-head"><div class="eyebrow">Technology partners</div>
+<h2>Certified across the enterprise stack</h2><p>From cloud and data to CRM and service management, our partnerships mean production-grade delivery, not experiments.</p></div>
+<div class="cgrid"><a class="card" href="https://www.accionlabs.com/microsoft-azure-partner" target="_blank" rel="noopener" style="--cc:var(--blue)"><div class="bd"><h3 style="font-size:17px;margin:0">Microsoft / Azure</h3><span class="go" style="color:var(--blue);margin-top:10px;display:inline-block">Partnership &rarr;</span></div></a><a class="card" href="https://www.accionlabs.com/aws-advanced-consulting-partner" target="_blank" rel="noopener" style="--cc:var(--blue)"><div class="bd"><h3 style="font-size:17px;margin:0">AWS</h3><span class="go" style="color:var(--blue);margin-top:10px;display:inline-block">Partnership &rarr;</span></div></a><a class="card" href="https://www.accionlabs.com/salesforce-consulting-partner" target="_blank" rel="noopener" style="--cc:var(--blue)"><div class="bd"><h3 style="font-size:17px;margin:0">Salesforce</h3><span class="go" style="color:var(--blue);margin-top:10px;display:inline-block">Partnership &rarr;</span></div></a><a class="card" href="https://www.accionlabs.com/servicenow-partner-solutions" target="_blank" rel="noopener" style="--cc:var(--blue)"><div class="bd"><h3 style="font-size:17px;margin:0">ServiceNow</h3><span class="go" style="color:var(--blue);margin-top:10px;display:inline-block">Partnership &rarr;</span></div></a><a class="card" href="https://www.accionlabs.com/databricks-consulting-partner" target="_blank" rel="noopener" style="--cc:var(--blue)"><div class="bd"><h3 style="font-size:17px;margin:0">Databricks</h3><span class="go" style="color:var(--blue);margin-top:10px;display:inline-block">Partnership &rarr;</span></div></a><a class="card" href="https://www.accionlabs.com/snowflake-consulting-partner" target="_blank" rel="noopener" style="--cc:var(--blue)"><div class="bd"><h3 style="font-size:17px;margin:0">Snowflake</h3><span class="go" style="color:var(--blue);margin-top:10px;display:inline-block">Partnership &rarr;</span></div></a><a class="card" href="https://www.accionlabs.com/technology-partners" target="_blank" rel="noopener" style="--cc:var(--blue)"><div class="bd"><h3 style="font-size:17px;margin:0">Adobe Commerce Cloud</h3><span class="go" style="color:var(--blue);margin-top:10px;display:inline-block">Partnership &rarr;</span></div></a></div></div></section><section class="ctaband" style="background:radial-gradient(1100px 520px at 88% -25%,rgba(20,104,0,0.14) 0%,transparent 62%),linear-gradient(160deg,rgba(20,104,0,0.12) 0%,rgba(20,104,0,0.04) 34%,#ffffff 66%)"><div class="wrap ctain"><div><h2>Building on one of these platforms?</h2><p>Tell us your platform and we will bring certified engineers and accelerators.</p></div><a class="btn btn-cta" style="background:var(--green)" href="contact.html">Talk to a partner team</a></div></section><footer class="site"><div class="wrap"><div class="fgrid">
 <div><div class="brand" style="color:var(--ink)"><span class="mk"></span>Accion<span>labs</span></div>
 <p style="font-size:14px;color:var(--muted);margin-top:12px;max-width:280px">An AI-Led Innovation Engineering company, powered by Semantic Engineering.</p></div>
 <div class="fcol"><h4>What We Do</h4><a href="smarter-people.html">Smarter People</a><a href="smarter-products.html">Smarter Products</a><a href="smarter-processes.html">Smarter Processes</a><a href="data.html">Smarter Data</a><a href="platforms.html">Smarter Platform</a><a href="governance-assurance.html">Smarter Assurance</a></div>
